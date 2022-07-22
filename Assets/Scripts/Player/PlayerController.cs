@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
     private void OnMove(InputValue movementValue) {
         // Player Move
         movementVector = movementValue.Get<Vector2>();
+        anim.SetFloat("Vertical", movementVector.y);
     }
 
     private void OnFire() {
