@@ -42,19 +42,6 @@ public class PlayerController : MonoBehaviour
 
             float angle = Mathf.Atan2(movementVector.y, movementVector.x) * Mathf.Rad2Deg;
             attackPoint.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-            // if (attackPoint.localPosition.x > 0f) {
-            //     attackPoint.rotation = Quaternion.Euler(0, 0, 0);
-            // }
-            // else if (attackPoint.localPosition.y > 0.2f) {
-            //     attackPoint.rotation = Quaternion.Euler(0, 0, 90);
-            // }
-            // else if (attackPoint.localPosition.x < 0f) {
-            //     attackPoint.rotation = Quaternion.Euler(0, 0, 180);
-            // }
-            // else if (attackPoint.localPosition.y < 0.2f) {
-            //     attackPoint.rotation = Quaternion.Euler(0, 0, -90);
-            // }
         }
     }
 
