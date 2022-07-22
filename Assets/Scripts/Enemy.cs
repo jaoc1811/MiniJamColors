@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
         GetComponent<Enemy>().enabled = true;
         transBody.GetComponent<Animator>().enabled = true;
         transShadow.GetComponent<Animator>().enabled = true;
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 
     private void Update() {

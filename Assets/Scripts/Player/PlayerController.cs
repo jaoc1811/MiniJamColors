@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
         // Damage
         foreach(Collider2D enemy in hitEnemies) {
-            Debug.Log("hit " + enemy.name);
+            enemy.GetComponent<Enemy>().Divide();
         }
         canAttack = false;
         StartCoroutine(attackRecharge());
