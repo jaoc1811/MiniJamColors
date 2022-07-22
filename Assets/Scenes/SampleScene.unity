@@ -510,6 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926422688}
+  - component: {fileID: 926422689}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -525,7 +526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926422687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.48, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -534,3 +535,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &926422689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926422687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18043784c71fc341bd763929c1d4764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 401660223}
+  shadow: {fileID: 88622413}
+  target: {fileID: 745096893}
+  transBody: {fileID: 401660225}
+  groundVelocity: {x: 0, y: 0}
+  verticalVelocity: 3
+  verticalSpeed: 3
+  speed: 8
+  gravity: -10

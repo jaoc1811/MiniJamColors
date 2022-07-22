@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,1674 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: slime_jump_in_place_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 456
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24da64c8ca0d4d468cf4bfd4bfb7336
+      internalID: 1937310753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 456
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f688a551d874c684f849fe2e997aa8dc
+      internalID: -1385710180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 438
+        width: 14
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fa79ecb9487b5459a10d61caa21280
+      internalID: -1543555269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_3
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 456
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3245544984c924a498d7cba90819f3b3
+      internalID: 2071462082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_4
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 456
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b32aba06f21a824fa4514b0a7a04c9d
+      internalID: 584005373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_5
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 456
+        width: 21
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a52b84b2fddf749b801e57fbb8be6b
+      internalID: 1827505682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_6
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 456
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b1eddbccf1a1b448373fee08ee01b7
+      internalID: -1598516256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_7
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 456
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c5085018cd6e949928edc3b1772fe1
+      internalID: 549103992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_8
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 456
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a32af30c9ed3442b1c6a745a893096
+      internalID: 1424732969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_9
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 456
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a841ea37ac9574098343e7cb790c6e
+      internalID: -759652896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_10
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 456
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e354b3725a3ae34ca65434e0cbb3092
+      internalID: -143204781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 384
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3bce6e77d32b84eaac3c21c83114c5
+      internalID: 499500691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 384
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefafeaada018e740bba9cd6d97d044b
+      internalID: -832581494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_13
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 384
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f205603710ba3f4798f645c7d9afe71
+      internalID: 1511130598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 384
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914a25f98ad6ab44ba49c0f8e91401a0
+      internalID: 785709732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_15
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 384
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f56194a350826488b0c4d1f89851af
+      internalID: -1153306363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_16
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 384
+        width: 21
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9016279b99aa3644ab872fb64514953
+      internalID: 1507312293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_17
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 384
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03b6e7fe7ef5414e9b01ce44ec41590
+      internalID: 47656341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_18
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 384
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5869f199a1d7fc640b1eb869e1ef013a
+      internalID: -208347011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_19
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 384
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a6c0b920f312b4cbfd3fa03a575ef9
+      internalID: -454289760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_20
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 384
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db8091ff88e33f4cb21cb2076cdd090
+      internalID: -1408918050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_21
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 384
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481036eb55bf85d49bfa711ff032eacb
+      internalID: 1084277835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 312
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024ba448f7250864998e4b056af267cd
+      internalID: 541110628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_23
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 312
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a422198786f223548a85d02f20027072
+      internalID: -1375556224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_24
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 312
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200f308dde955074c8773f5b9b11239a
+      internalID: 1439923938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_25
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 312
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e2ac4a309e68040b579bfa9f21c0a6
+      internalID: -74201876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_26
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 312
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6491b972df7444fa115dace72f1249
+      internalID: -2041781488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_27
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 312
+        width: 21
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bef710b429a12842945a054949a488b
+      internalID: 1680810263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_28
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 312
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cc75669fd8ab240b840d8882928f98
+      internalID: 1420794626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_29
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 312
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3612fa97e8c724caf4603293ed6e9a
+      internalID: -1348637374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_30
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 312
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453d5be65b0161240a2000f645d6c775
+      internalID: -424642131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_31
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 312
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e94c2f5bf19e8e49842a0b87b567209
+      internalID: 59616021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_32
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 312
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e396cf8ca83a646aeef4deca36eef7
+      internalID: 280545567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_33
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 240
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0b927a1bfd9b5418efd008f52d4b21
+      internalID: 201085081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_34
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 240
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da7539403a429c41ab08c68a1273d29
+      internalID: -1670972090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_35
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 240
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a14df217b46e544c82f91d64fb79f19
+      internalID: -1462984220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_36
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 240
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca95b9ac293641459ae82dda4b149e4
+      internalID: 146389536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_37
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 240
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffaed5cb551e4b408f36e3ac0ee74b8
+      internalID: 650232548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_38
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 240
+        width: 21
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1ddd5dd77fa8d4d994ce6efd424cde
+      internalID: 1199648735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_39
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 240
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4296ba39dbb1a4f89e4036f9bcf911
+      internalID: 1611159113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_40
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 240
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0203cb4904875b45b3efa370dedd865
+      internalID: -83866047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_41
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 240
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4b2b7c0461770439e50527b1948ad8
+      internalID: 2128208167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_42
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 240
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4589e16ba837a4596f61c31f46eb1a
+      internalID: 585727494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_43
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 240
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8309901270457438f9999f7fc3d0e4
+      internalID: 594697446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_44
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 168
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfdfef3c2897b64e8f874dd3ae38320
+      internalID: -283642778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_45
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 168
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3155923d4f3f9764a8fe73daf725c510
+      internalID: 869329206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_46
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 168
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46e70876819acd489549fbb9896def0
+      internalID: -211356020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_47
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 168
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe47c2180f0f124d89eb231ac2f21ba
+      internalID: -1873222016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_48
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 168
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd7042e6f9d6a446891ecfa8edae53a
+      internalID: -326713378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_49
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 168
+        width: 21
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453628c47fda32a48a6e4ebe55e668a2
+      internalID: 1649560294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_50
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 168
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4036477cfa7c6c142a0eb47771f9e7da
+      internalID: 379268430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_51
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 168
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe740c2621baa94f804d48529431634
+      internalID: 1273662548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_52
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 168
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b6bf73a6148f74b8db6c9955b4cce4
+      internalID: -968787276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_53
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 168
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d167886a7a2b13429c0b24a3d77087d
+      internalID: 1204215651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_54
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 168
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8b332c56eb4e94a8506ca5f49ccd36
+      internalID: -258413512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_55
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 96
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3bd56f2da448641971de19aa5e3656
+      internalID: -1368298578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_56
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 96
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f5c83c32622bd4c980e48a866df476
+      internalID: -1720384170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_57
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 96
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1d038d2213c8a4c8d4ad04cef92c57
+      internalID: -299830236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_58
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 96
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4142b24432bdec845af80bcfa5e302c6
+      internalID: 446306588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_59
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 96
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b22a1650cbd334781549e0d952bef9
+      internalID: -867279752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_60
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 96
+        width: 21
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1aa79a6c210b945a3edfa872636abe
+      internalID: -27992155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_61
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 96
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cc8439c976aa34e990bbfefa7f2537
+      internalID: -1865573086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_62
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 96
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb04dc75d486fa43b32b278efb4fb9e
+      internalID: -1439758276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_63
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 96
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8635ae8cd610e49945302c6d1c5d69
+      internalID: -1140489935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_64
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 96
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616ca0a4b22018641acf9af90421e34e
+      internalID: 865365264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_65
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 96
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a1379b5eca0dc4e9394f304e55b902
+      internalID: 69091231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_66
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0519abc4a866044baab537946c9f220
+      internalID: 793313125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_67
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 24
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f14ddd90d0b3ae48bedc2ad86c3cbe7
+      internalID: 2117401610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_68
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 24
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5057e28c9606164f85df43d2ba0198b
+      internalID: 715226583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_69
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 24
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d4ae8ef6e6d0649bc2f3b410fb65c0
+      internalID: 1328390828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_70
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 24
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8e0647c059fee4eb2fd471e7c7be99
+      internalID: 1143147033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_71
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 24
+        width: 21
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de007aa0312a24b4c85b4913c18800df
+      internalID: 1883767770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_72
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 24
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc294c7c3a2db8449d6f29a107023ae
+      internalID: 967450524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_73
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 24
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad93a3ee505713c4f90c807eb58b0753
+      internalID: 2076987903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_74
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 24
+        width: 13
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a4958ace513e04a95a381e265cce04
+      internalID: -1871853186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_75
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 24
+        width: 23
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e2a46f74680da4c8ae90169743b1f0
+      internalID: -1637551457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_jump_in_place_76
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 24
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c946c4a2cf91e48a79e59904d78004
+      internalID: -1424707299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +1754,84 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slime_jump_in_place_41: 2128208167
+      slime_jump_in_place_29: -1348637374
+      slime_jump_in_place_73: 2076987903
+      slime_jump_in_place_27: 1680810263
+      slime_jump_in_place_43: 594697446
+      slime_jump_in_place_40: -83866047
+      slime_jump_in_place_60: -27992155
+      slime_jump_in_place_72: 967450524
+      slime_jump_in_place_61: -1865573086
+      slime_jump_in_place_3: 2071462082
+      slime_jump_in_place_10: -143204781
+      slime_jump_in_place_30: -424642131
+      slime_jump_in_place_52: -968787276
+      slime_jump_in_place_56: -1720384170
+      slime_jump_in_place_62: -1439758276
+      slime_jump_in_place_24: 1439923938
+      slime_jump_in_place_71: 1883767770
+      slime_jump_in_place_74: -1871853186
+      slime_jump_in_place_1: -1385710180
+      slime_jump_in_place_17: 47656341
+      slime_jump_in_place_28: 1420794626
+      slime_jump_in_place_9: -759652896
+      slime_jump_in_place_76: -1424707299
+      slime_jump_in_place_37: 650232548
+      slime_jump_in_place_49: 1649560294
+      slime_jump_in_place_57: -299830236
+      slime_jump_in_place_6: -1598516256
+      slime_jump_in_place_65: 69091231
+      slime_jump_in_place_26: -2041781488
+      slime_jump_in_place_64: 865365264
+      slime_jump_in_place_18: -208347011
+      slime_jump_in_place_44: -283642778
+      slime_jump_in_place_39: 1611159113
+      slime_jump_in_place_7: 549103992
+      slime_jump_in_place_47: -1873222016
+      slime_jump_in_place_66: 793313125
+      slime_jump_in_place_46: -211356020
+      slime_jump_in_place_14: 785709732
+      slime_jump_in_place_22: 541110628
+      slime_jump_in_place_21: 1084277835
+      slime_jump_in_place_4: 584005373
+      slime_jump_in_place_31: 59616021
+      slime_jump_in_place_38: 1199648735
+      slime_jump_in_place_34: -1670972090
+      slime_jump_in_place_19: -454289760
+      slime_jump_in_place_20: -1408918050
+      slime_jump_in_place_50: 379268430
+      slime_jump_in_place_25: -74201876
+      slime_jump_in_place_35: -1462984220
+      slime_jump_in_place_53: 1204215651
+      slime_jump_in_place_36: 146389536
+      slime_jump_in_place_55: -1368298578
+      slime_jump_in_place_13: 1511130598
+      slime_jump_in_place_16: 1507312293
+      slime_jump_in_place_75: -1637551457
+      slime_jump_in_place_54: -258413512
+      slime_jump_in_place_63: -1140489935
+      slime_jump_in_place_45: 869329206
+      slime_jump_in_place_68: 715226583
+      slime_jump_in_place_33: 201085081
+      slime_jump_in_place_48: -326713378
+      slime_jump_in_place_5: 1827505682
+      slime_jump_in_place_12: -832581494
+      slime_jump_in_place_58: 446306588
+      slime_jump_in_place_11: 499500691
+      slime_jump_in_place_2: -1543555269
+      slime_jump_in_place_70: 1143147033
+      slime_jump_in_place_15: -1153306363
+      slime_jump_in_place_8: 1424732969
+      slime_jump_in_place_23: -1375556224
+      slime_jump_in_place_32: 280545567
+      slime_jump_in_place_69: 1328390828
+      slime_jump_in_place_51: 1273662548
+      slime_jump_in_place_42: 585727494
+      slime_jump_in_place_67: 2117401610
+      slime_jump_in_place_0: 1937310753
+      slime_jump_in_place_59: -867279752
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
