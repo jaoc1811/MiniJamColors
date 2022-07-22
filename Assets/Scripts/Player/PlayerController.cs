@@ -36,8 +36,10 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Speed", rb.velocity.magnitude);
         if (movementVector.x < 0) {
             bodySprite.flipX = true;
+            attackPoint.GetComponent<WeaponController>().FlipX(true);
         } else if (movementVector.x > 0) {
             bodySprite.flipX = false;
+            attackPoint.GetComponent<WeaponController>().FlipX(false);
         }
     }
 
@@ -57,6 +59,7 @@ public class PlayerController : MonoBehaviour
 
     void attack() {
         // Play animation
+        attackPoint.GetComponent<WeaponController>().Enable();
 
         // Swing blade / detect enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayers);
