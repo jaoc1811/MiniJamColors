@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 276004121}
   - component: {fileID: 276004120}
   - component: {fileID: 276004119}
+  - component: {fileID: 276004122}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -151,7 +152,7 @@ Animator:
   m_GameObject: {fileID: 276004118}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7fd348e73d67804409847c746a85f2c3, type: 2}
+  m_Controller: {fileID: 9100000, guid: a569213e8564b2b45947ccd81f37038b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -228,6 +229,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276004122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276004118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1fda6784802f3a41bb59011180baf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainbowSpeed: 5
 --- !u!1 &1741885490
 GameObject:
   m_ObjectHideFlags: 0
