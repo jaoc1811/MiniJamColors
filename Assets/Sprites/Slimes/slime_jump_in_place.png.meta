@@ -1761,7 +1761,6 @@ TextureImporter:
       slime_jump_in_place_27: 1680810263
       slime_jump_in_place_43: 594697446
       slime_jump_in_place_40: -83866047
-      slime_jump_in_place_60: -27992155
       slime_jump_in_place_72: 967450524
       slime_jump_in_place_61: -1865573086
       slime_jump_in_place_3: 2071462082
@@ -1822,15 +1821,16 @@ TextureImporter:
       slime_jump_in_place_11: 499500691
       slime_jump_in_place_2: -1543555269
       slime_jump_in_place_70: 1143147033
+      slime_jump_in_place_60: -27992155
       slime_jump_in_place_15: -1153306363
       slime_jump_in_place_8: 1424732969
-      slime_jump_in_place_23: -1375556224
       slime_jump_in_place_32: 280545567
-      slime_jump_in_place_69: 1328390828
+      slime_jump_in_place_23: -1375556224
       slime_jump_in_place_51: 1273662548
       slime_jump_in_place_42: 585727494
       slime_jump_in_place_67: 2117401610
       slime_jump_in_place_0: 1937310753
+      slime_jump_in_place_69: 1328390828
       slime_jump_in_place_59: -867279752
   spritePackingTag: 
   pSDRemoveMatte: 0

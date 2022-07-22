@@ -433,7 +433,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       slime_idle1_9: -2041387503
-      slime_idle1_12: 1436417728
       slime_idle1_5: -272458144
       slime_idle1_3: -380089280
       slime_idle1_4: 336949444
@@ -443,6 +442,7 @@ TextureImporter:
       slime_idle1_6: -309621831
       slime_idle1_13: -48804665
       slime_idle1_8: 2133238239
+      slime_idle1_12: 1436417728
       slime_idle1_0: -1402445045
       slime_idle1_2: -164698210
       slime_idle1_11: -624986490
