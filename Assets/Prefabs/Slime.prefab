@@ -53,13 +53,12 @@ MonoBehaviour:
   transShadow: {fileID: 3015334210938193795}
   groundVelocity: {x: 0, y: 0}
   verticalVelocity: 3
-  verticalSpeed: 3
-  speed: 4
+  verticalSpeed: {x: 3, y: 5}
+  speed: {x: 6, y: 9}
   gravity: -10
   bodySprite: {fileID: 3015334211184057231}
   shadowSprite: {fileID: 3015334210938193793}
   enemyPrefab: {fileID: 3015334210643530832}
-  circleCollider: {fileID: 3015334211025732305}
   isGrounded: 1
 --- !u!58 &3015334211025732305
 CircleCollider2D:

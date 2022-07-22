@@ -11,8 +11,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform transShadow;
     [SerializeField] Vector2 groundVelocity;
     [SerializeField] float verticalVelocity;
-    [SerializeField] float verticalSpeed;
-    [SerializeField] float speed;
+    [SerializeField] Vector2 verticalSpeed;
+    [SerializeField] Vector2 speed;
     [SerializeField] float gravity = -10;
     [SerializeField] SpriteRenderer bodySprite;
     [SerializeField] SpriteRenderer shadowSprite;
@@ -48,8 +48,8 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(1);
         bodyAnimator.SetBool("jumping", true);
         shadowAnimator.SetBool("jumping", true);
-        verticalVelocity = verticalSpeed;
-        groundVelocity = direction.normalized * speed;
+        verticalVelocity = spawn ? 2f : Random.Range(verticalSpeed.x,verticalSpeed.y);
+        groundVelocity = direction.normalized * Random.Range(speed.x,speed.y);
         isGrounded = false;
     }
 
@@ -73,17 +73,18 @@ public class Enemy : MonoBehaviour
     }
 
     [ContextMenu("Dividir")]
-    public void Divide() {
+    public void Divide(Vector3 direction) {
+        Debug.Log(direction);
         Destroy(gameObject);
         GameObject leftHalf = Instantiate(enemyPrefab,transform.position,Quaternion.identity);
         leftHalf.transform.localScale = transform.localScale / 2;
-        leftHalf.GetComponent<Enemy>().Spawn(true);
+        leftHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x + 0.05f,direction.y));
         GameObject rightHalf = Instantiate(enemyPrefab,transform.position,Quaternion.identity);
         rightHalf.transform.localScale = transform.localScale / 2;
-        rightHalf.GetComponent<Enemy>().Spawn(false);
+        rightHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x - 0.05f,direction.y));
     }
 
-    public void Spawn(bool right) {
-        StartCoroutine(JumpCorroutine(new Vector2(right ? 1 : -1, 0), true));
+    public void Spawn(Vector2 direction) {
+        StartCoroutine(JumpCorroutine(direction, true));
     }
 }

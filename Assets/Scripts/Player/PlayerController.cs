@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
         // Damage
         foreach(Collider2D enemy in hitEnemies) {
-            enemy.GetComponent<Enemy>().Divide();
+            enemy.GetComponent<Enemy>().Divide(new Vector3(attackPoint.localPosition.x,attackPoint.localPosition.y - 0.2f, 0));
         }
         canAttack = false;
         StartCoroutine(attackRecharge());
