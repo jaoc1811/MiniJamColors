@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header ("Attack")]
     [SerializeField] Transform attackPoint;
     [SerializeField] float attackRange = 0.33f;
-    [SerializeField] float attackRadius = 0.33f;
+    [SerializeField] float attackRadius = 0.45f;
     [SerializeField] float attackDelay = 0.25f;
     [SerializeField] LayerMask enemyLayers;
 
@@ -68,10 +68,16 @@ public class PlayerController : MonoBehaviour
         attackPoint.GetComponent<WeaponController>().Enable();
 
         // Swing blade / detect enemies in range
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayers);
+        //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayers);
+        Collider2D[] hitEnemies = new Collider2D[10];
+        ContactFilter2D filter2D = new ContactFilter2D();
+        filter2D.SetLayerMask(enemyLayers);
+        int numberOfHitEnemies = Physics2D.OverlapCollider(attackPoint.GetComponent<CapsuleCollider2D>(), filter2D, hitEnemies);
 
         // Damage
-        foreach(Collider2D enemy in hitEnemies) {
+        for (int i = 0; i < numberOfHitEnemies; i++) {
+        Collider2D enemy = hitEnemies[i];
+        if (enemy != null)
             Debug.Log("hit " + enemy.name);
         }
         canAttack = false;
@@ -83,7 +89,7 @@ public class PlayerController : MonoBehaviour
         if (attackPoint == null)
             return;
 
-        Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+        //Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
     }
 
     IEnumerator attackRecharge() {
