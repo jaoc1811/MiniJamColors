@@ -34,21 +34,33 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         rb.velocity = movementVector * speed;
         anim.SetFloat("Speed", rb.velocity.magnitude);
-        if (movementVector.x < 0) {
-            bodySprite.flipX = true;
-            attackPoint.GetComponent<WeaponController>().FlipX(true);
-        } else if (movementVector.x > 0) {
-            bodySprite.flipX = false;
-            attackPoint.GetComponent<WeaponController>().FlipX(false);
+
+         // AttackPoint move and rotate
+        if (movementVector.magnitude != 0 && !attackPoint.GetComponent<WeaponController>().isAttacking()) {
+            attackPoint.localPosition = movementVector.normalized * attackRange;
+            attackPoint.localPosition += new Vector3(0, 0.2f, 0);
+
+            float angle = Mathf.Atan2(movementVector.y, movementVector.x) * Mathf.Rad2Deg;
+            attackPoint.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            // if (attackPoint.localPosition.x > 0f) {
+            //     attackPoint.rotation = Quaternion.Euler(0, 0, 0);
+            // }
+            // else if (attackPoint.localPosition.y > 0.2f) {
+            //     attackPoint.rotation = Quaternion.Euler(0, 0, 90);
+            // }
+            // else if (attackPoint.localPosition.x < 0f) {
+            //     attackPoint.rotation = Quaternion.Euler(0, 0, 180);
+            // }
+            // else if (attackPoint.localPosition.y < 0.2f) {
+            //     attackPoint.rotation = Quaternion.Euler(0, 0, -90);
+            // }
         }
     }
 
     private void OnMove(InputValue movementValue) {
+        // Player Move
         movementVector = movementValue.Get<Vector2>();
-        if (movementVector.magnitude != 0) {
-            attackPoint.localPosition = movementVector.normalized * attackRange;
-            attackPoint.localPosition += new Vector3(0, 0.2f, 0);
-        }
     }
 
     private void OnFire() {
@@ -63,8 +75,6 @@ public class PlayerController : MonoBehaviour
 
         // Swing blade / detect enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayers);
-
-            
 
         // Damage
         foreach(Collider2D enemy in hitEnemies) {

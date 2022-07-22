@@ -6,6 +6,7 @@ public class WeaponController : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     Animator anim;
+    bool attacking;
 
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -15,15 +16,17 @@ public class WeaponController : MonoBehaviour
     public void Enable(){
         spriteRenderer.enabled = true;
         anim.enabled = true;
+        attacking = true;
     }
 
     public void Disable(){
         spriteRenderer.enabled = false;
         anim.enabled = false;
+        attacking = false;
     }
 
-    public void FlipX(bool flip){
-        spriteRenderer.flipX = flip;
+    public bool isAttacking() {
+        return attacking;
     }
 
 }
