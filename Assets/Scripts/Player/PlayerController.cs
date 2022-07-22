@@ -35,6 +35,13 @@ public class PlayerController : MonoBehaviour
         rb.velocity = movementVector * speed;
         anim.SetFloat("Speed", rb.velocity.magnitude);
 
+        if (movementVector.x > 0) {
+            bodySprite.flipX = false;
+        }
+        else if (movementVector.x < 0) {
+            bodySprite.flipX = true;
+        }
+
          // AttackPoint move and rotate
         if (movementVector.magnitude != 0 && !attackPoint.GetComponent<WeaponController>().isAttacking()) {
             attackPoint.localPosition = movementVector.normalized * attackRange;
