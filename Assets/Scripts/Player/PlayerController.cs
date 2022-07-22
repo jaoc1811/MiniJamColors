@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
     private void OnMove(InputValue movementValue) {
         // Player Move
         movementVector = movementValue.Get<Vector2>();
+        anim.SetFloat("Vertical", movementVector.y);
     }
 
     private void OnFire() {
@@ -76,9 +77,10 @@ public class PlayerController : MonoBehaviour
 
         // Damage
         for (int i = 0; i < numberOfHitEnemies; i++) {
-        Collider2D enemy = hitEnemies[i];
-        if (enemy != null)
-            Debug.Log("hit " + enemy.name);
+            Collider2D enemy = hitEnemies[i];
+            if (enemy != null) {
+                enemy.GetComponent<Enemy>().Divide();
+            }
         }
         canAttack = false;
         StartCoroutine(attackRecharge());

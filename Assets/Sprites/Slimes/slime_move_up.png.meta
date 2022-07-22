@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d706c481ca2165d43964a4a3fd1a1a4a
+guid: 05830499406ce694598c2b64427bbe40
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,8 +45,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -124,23 +124,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slime_move_0
+      name: slime_move_up_0
       rect:
         serializedVersion: 2
         x: 24
@@ -154,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20a34f7e74eefb345828ee091f873980
-      internalID: 1854002301
+      spriteID: db740301aac4ea84b81345cfe27b9523
+      internalID: 1436752962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_1
+      name: slime_move_up_1
       rect:
         serializedVersion: 2
         x: 105
@@ -175,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81fb7b4264713e43ba23a7e007eb4e6
-      internalID: 1890674822
+      spriteID: d567a29a606a235458c598ea814f7dbf
+      internalID: 1525772454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_2
+      name: slime_move_up_2
       rect:
         serializedVersion: 2
         x: 185
@@ -196,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb9cbfb10c14afe4d9f006dee9e7c1f4
-      internalID: 1988848467
+      spriteID: 1b70658a862363f45a42c7613d510cac
+      internalID: 287157879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_3
+      name: slime_move_up_3
       rect:
         serializedVersion: 2
         x: 265
@@ -217,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2499bcabee756a741bfdd7a3e47cc3f9
-      internalID: 1686975583
+      spriteID: 470b84c67e75f404c9bcee6171602b95
+      internalID: 111748200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_4
+      name: slime_move_up_4
       rect:
         serializedVersion: 2
         x: 345
@@ -238,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73340d0c336bdd04a8bd8910ed017ae8
-      internalID: -1348170316
+      spriteID: 7fc76cbb4c475504ab7a275a8a6dc18e
+      internalID: -1449032883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_5
+      name: slime_move_up_5
       rect:
         serializedVersion: 2
         x: 427
@@ -259,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4359afc3f521ee54183484b7c3e972a7
-      internalID: -1898829926
+      spriteID: 63a3af866815af64ead1625856478c45
+      internalID: -2136627813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_6
+      name: slime_move_up_6
       rect:
         serializedVersion: 2
         x: 506
@@ -280,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 592392d10dbc55a46bafd41428a63008
-      internalID: -259511619
+      spriteID: 33478d52d50f5404394bc545e54d64f4
+      internalID: -1623567677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_7
+      name: slime_move_up_7
       rect:
         serializedVersion: 2
         x: 24
@@ -301,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b94f1a4fd3d7d9341b847d504991feac
-      internalID: -2107207205
+      spriteID: eeb17f1acecdaa34da3146b91cca6104
+      internalID: 1912987858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_8
+      name: slime_move_up_8
       rect:
         serializedVersion: 2
         x: 105
@@ -322,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d20c388d7b9cd6c43b0529d049840ed2
-      internalID: -1896184379
+      spriteID: 75d392dd26a35e443a39285ee2b9339c
+      internalID: -1046469904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_9
+      name: slime_move_up_9
       rect:
         serializedVersion: 2
         x: 185
@@ -343,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22d031a2ddb87de46af982a899086ffb
-      internalID: 1847076448
+      spriteID: 6369a1b16cd389949ad05b30ef8f44dc
+      internalID: -1572861565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_10
+      name: slime_move_up_10
       rect:
         serializedVersion: 2
         x: 265
@@ -364,14 +352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66177cdfab09cf34ba882be21e15a6ff
-      internalID: 886736130
+      spriteID: 4817e8eb7411be444991a1d4fe1b3e94
+      internalID: -298529528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_11
+      name: slime_move_up_11
       rect:
         serializedVersion: 2
         x: 345
@@ -385,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6a0f59024a4f9840be337df0db6ed8a
-      internalID: 1035011662
+      spriteID: c78eb971e53e8e9408fbd80e8ac06503
+      internalID: 152787402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_12
+      name: slime_move_up_12
       rect:
         serializedVersion: 2
         x: 427
@@ -406,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc557e01609dab24aa2bf60888cd2a12
-      internalID: -7783525
+      spriteID: 29b3277657b108a4db373ba2eb99c508
+      internalID: 2106585960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_13
+      name: slime_move_up_13
       rect:
         serializedVersion: 2
         x: 506
@@ -427,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 352ccb7f6cee02343bff6406718737e2
-      internalID: -2065407967
+      spriteID: 002a64198a20b7745af2bc84d32495d2
+      internalID: 1082285812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_14
+      name: slime_move_up_14
       rect:
         serializedVersion: 2
         x: 24
@@ -448,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae0e8ce91b01caf449d18d0d110ad30f
-      internalID: -1085646506
+      spriteID: 1bf81772fec3c1d478fb003ac811e65f
+      internalID: 1169901061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_15
+      name: slime_move_up_15
       rect:
         serializedVersion: 2
         x: 105
@@ -469,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e36a09bbaf03ebd4dbf22806a683a4a3
-      internalID: -1970152265
+      spriteID: 73533b4f353aef34a9565c72b33f78a0
+      internalID: -1274416895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_16
+      name: slime_move_up_16
       rect:
         serializedVersion: 2
         x: 185
@@ -490,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 489f8324e5d16f245affb1accd396f18
-      internalID: 1219174599
+      spriteID: 8533b47bf434a7b42b6700b32bc88388
+      internalID: -873660009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_17
+      name: slime_move_up_17
       rect:
         serializedVersion: 2
         x: 265
@@ -511,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddbaf85444db97542a61e5a179d3be02
-      internalID: 748273320
+      spriteID: fb748059f5cf67240a206feb09184616
+      internalID: 1878248636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_18
+      name: slime_move_up_18
       rect:
         serializedVersion: 2
         x: 345
@@ -532,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf1c72ce71223b24ebfd5f4738127e2e
-      internalID: -292546642
+      spriteID: 89e307fe2c7e0394992f897faed52e28
+      internalID: 766370757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_19
+      name: slime_move_up_19
       rect:
         serializedVersion: 2
         x: 427
@@ -553,14 +541,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b34bd32ca2f84b94ca1000b6851d81c0
-      internalID: 1032067713
+      spriteID: 90d560381fcfb7c45a804bbc9aa5773c
+      internalID: 606653044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_20
+      name: slime_move_up_20
       rect:
         serializedVersion: 2
         x: 506
@@ -574,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7d74a86a6ea6524fadaadbdd9509807
-      internalID: -1746444475
+      spriteID: 6ac65186b6c02ea4abefce3e14ab084c
+      internalID: -790918402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_21
+      name: slime_move_up_21
       rect:
         serializedVersion: 2
         x: 24
@@ -595,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd559b3dbac9f914e87fc64f8104b349
-      internalID: 1354159162
+      spriteID: 6369c41b32d04af41b063e45c557ebf4
+      internalID: -2085520268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_22
+      name: slime_move_up_22
       rect:
         serializedVersion: 2
         x: 105
@@ -616,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78568754a5d23d1459fe0b738693a224
-      internalID: 695541072
+      spriteID: 870ab56bb8d2c274ca9bccb87d06f149
+      internalID: -1173481272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_23
+      name: slime_move_up_23
       rect:
         serializedVersion: 2
         x: 185
@@ -637,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14085da727755fa41a20dda06037fcb9
-      internalID: 54626412
+      spriteID: 2086fa6b37e97c74cbaf734616187ac8
+      internalID: -2089085260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_24
+      name: slime_move_up_24
       rect:
         serializedVersion: 2
         x: 265
@@ -658,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38c927fe40b09f8478c5fa9cce6e3ea1
-      internalID: 795265324
+      spriteID: 71e3927a6fefcde48b13e634f4b98e53
+      internalID: 546353474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_25
+      name: slime_move_up_25
       rect:
         serializedVersion: 2
         x: 345
@@ -679,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11e4634789505ab4ba5da28bad670107
-      internalID: 1992334072
+      spriteID: 9d5714c2a5b10c140b75b667a183e015
+      internalID: -504062563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_26
+      name: slime_move_up_26
       rect:
         serializedVersion: 2
         x: 427
@@ -700,14 +688,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5e199ee4a3baea49a42d25da2694b43
-      internalID: 536260225
+      spriteID: d97bc102c5978d04aaa31ecfac903963
+      internalID: -1799333627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_27
+      name: slime_move_up_27
       rect:
         serializedVersion: 2
         x: 506
@@ -721,14 +709,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2f47927964e95b43bbd42a488de2302
-      internalID: 147179921
+      spriteID: 4e63c9f03c4c74642afa1a26191b9fd0
+      internalID: -1585134940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_28
+      name: slime_move_up_28
       rect:
         serializedVersion: 2
         x: 24
@@ -742,14 +730,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4828a69a5cc381d47b997e9a3fc0218a
-      internalID: -1750547727
+      spriteID: 69953335f6459d04ea5ee453f2c280fd
+      internalID: -617710504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_29
+      name: slime_move_up_29
       rect:
         serializedVersion: 2
         x: 105
@@ -763,14 +751,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63d88e3631f67a94aaaa7617a0ea2d0d
-      internalID: -679027955
+      spriteID: 9690c346114e0d24a92cca7b2698e1b5
+      internalID: -1636722700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_30
+      name: slime_move_up_30
       rect:
         serializedVersion: 2
         x: 185
@@ -784,14 +772,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79f93a38c4c831b43bd6c8f2136d227f
-      internalID: -1790845095
+      spriteID: 4e0ce78d9a7f1ef4dacbc7ae183211c8
+      internalID: 1717039909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_31
+      name: slime_move_up_31
       rect:
         serializedVersion: 2
         x: 265
@@ -805,14 +793,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 343d0883fe2405342945be3c28cb657b
-      internalID: -574536912
+      spriteID: 24f5f69004583284e9869b13907bb796
+      internalID: 528572245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_32
+      name: slime_move_up_32
       rect:
         serializedVersion: 2
         x: 345
@@ -826,14 +814,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a30ce44b9ce7f9e4fbf1900528fc870c
-      internalID: -631647934
+      spriteID: 119509b051e73f844acce04665678830
+      internalID: 2029098186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_33
+      name: slime_move_up_33
       rect:
         serializedVersion: 2
         x: 427
@@ -847,14 +835,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 447dd2dc9ecfb8846933ef755e2386c2
-      internalID: 839166022
+      spriteID: 8a1eb8c904fc545469d7b6117762381a
+      internalID: -424774191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_34
+      name: slime_move_up_34
       rect:
         serializedVersion: 2
         x: 506
@@ -868,14 +856,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 256dfacb92553a34fa124fcf3b05db63
-      internalID: 1654531547
+      spriteID: b5bb2c31b31f6714bb81b67fad036835
+      internalID: 1559635193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_35
+      name: slime_move_up_35
       rect:
         serializedVersion: 2
         x: 24
@@ -889,14 +877,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4d2e244606678c4fbb311070b7d6d73
-      internalID: 618613084
+      spriteID: 993e03b5c4ca53b4392f71b2686f51a6
+      internalID: 1279975336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_36
+      name: slime_move_up_36
       rect:
         serializedVersion: 2
         x: 105
@@ -910,14 +898,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3fa860b651d4c47bfb50fba962bcad
-      internalID: -355309022
+      spriteID: 9b0ff05ce259f4442a91bdfc6f31f2ed
+      internalID: -1779336449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_37
+      name: slime_move_up_37
       rect:
         serializedVersion: 2
         x: 185
@@ -931,14 +919,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef41795771324ec4da5989f2ebe68b35
-      internalID: -1551749010
+      spriteID: 09fe576c4e2702c4798a529ac693ccb3
+      internalID: 1552122363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_38
+      name: slime_move_up_38
       rect:
         serializedVersion: 2
         x: 265
@@ -952,14 +940,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be8d76c3cf2dbfc469d4fef76ecdfa7b
-      internalID: 1079234187
+      spriteID: 4f91f6d28479e94478309d9fa5f0d3a5
+      internalID: 224603045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_39
+      name: slime_move_up_39
       rect:
         serializedVersion: 2
         x: 345
@@ -973,14 +961,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a3e0cbb540a7ac489208234af331b2b
-      internalID: 318830300
+      spriteID: 7323d26811490ac459a1d28bc5ee073a
+      internalID: -1161026425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_40
+      name: slime_move_up_40
       rect:
         serializedVersion: 2
         x: 427
@@ -994,14 +982,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cd8e0e7e6e86fb46b3872feb539376a
-      internalID: 1821464550
+      spriteID: e59b80a4512996a4ead4f545f0473849
+      internalID: -320340150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_41
+      name: slime_move_up_41
       rect:
         serializedVersion: 2
         x: 506
@@ -1015,14 +1003,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7addd96abea97e34690a450bd4ae73b5
-      internalID: -1749915709
+      spriteID: d1b39b85743c18947ac09254ae6272c1
+      internalID: -880616089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_42
+      name: slime_move_up_42
       rect:
         serializedVersion: 2
         x: 24
@@ -1036,14 +1024,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b316dd5fd9750a47a9f099f2c1d91f4
-      internalID: 739837366
+      spriteID: 1fba0a553d84f054ab96d1b733573d7a
+      internalID: -1288162801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_43
+      name: slime_move_up_43
       rect:
         serializedVersion: 2
         x: 105
@@ -1057,14 +1045,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2296884f5551615459a51991419a1fb5
-      internalID: -25121110
+      spriteID: 94da189c0a847ba41bc733279621a00d
+      internalID: -547654839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_44
+      name: slime_move_up_44
       rect:
         serializedVersion: 2
         x: 185
@@ -1078,14 +1066,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4647ebe6d4fbcbe479e6cb3a6a8cdf63
-      internalID: 414285516
+      spriteID: ec1802e204bca5343893f72218f9c397
+      internalID: -1909909992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_45
+      name: slime_move_up_45
       rect:
         serializedVersion: 2
         x: 265
@@ -1099,14 +1087,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abfe77c7562f95044b54c218bb8d80c0
-      internalID: -343733848
+      spriteID: 631bbc5024e9d4f4aa39ce4ea614d3d6
+      internalID: -1934098364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_46
+      name: slime_move_up_46
       rect:
         serializedVersion: 2
         x: 345
@@ -1120,14 +1108,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e50ea765ffe08cc4fbdeeb9250ac90ab
-      internalID: -1529902569
+      spriteID: d126a32d42a420046a6a6b5d075c65e3
+      internalID: -1678454429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_47
+      name: slime_move_up_47
       rect:
         serializedVersion: 2
         x: 427
@@ -1141,14 +1129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 946a5990a071c654cab59265801ddad5
-      internalID: 1717242651
+      spriteID: 8c6c535f23eddd94aaee712a16ad66e9
+      internalID: 14376697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_move_48
+      name: slime_move_up_48
       rect:
         serializedVersion: 2
         x: 506
@@ -1162,8 +1150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7561ae4435a966b48838263d06e86fb9
-      internalID: -949580560
+      spriteID: ec32b7016aa6f82418f3418b3bec1381
+      internalID: -1255118354
       vertices: []
       indices: 
       edges: []
@@ -1179,55 +1167,55 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slime_move_19: 1032067713
-      slime_move_8: -1896184379
-      slime_move_23: 54626412
-      slime_move_37: -1551749010
-      slime_move_12: -7783525
-      slime_move_27: 147179921
-      slime_move_44: 414285516
-      slime_move_26: 536260225
-      slime_move_10: 886736130
-      slime_move_16: 1219174599
-      slime_move_3: 1686975583
-      slime_move_38: 1079234187
-      slime_move_4: -1348170316
-      slime_move_11: 1035011662
-      slime_move_28: -1750547727
-      slime_move_14: -1085646506
-      slime_move_36: -355309022
-      slime_move_32: -631647934
-      slime_move_42: 739837366
-      slime_move_35: 618613084
-      slime_move_1: 1890674822
-      slime_move_43: -25121110
-      slime_move_33: 839166022
-      slime_move_45: -343733848
-      slime_move_29: -679027955
-      slime_move_41: -1749915709
-      slime_move_17: 748273320
-      slime_move_39: 318830300
-      slime_move_15: -1970152265
-      slime_move_46: -1529902569
-      slime_move_0: 1854002301
-      slime_move_6: -259511619
-      slime_move_48: -949580560
-      slime_move_24: 795265324
-      slime_move_5: -1898829926
-      slime_move_20: -1746444475
-      slime_move_2: 1988848467
-      slime_move_18: -292546642
-      slime_move_9: 1847076448
-      slime_move_13: -2065407967
-      slime_move_34: 1654531547
-      slime_move_21: 1354159162
-      slime_move_7: -2107207205
-      slime_move_30: -1790845095
-      slime_move_31: -574536912
-      slime_move_47: 1717242651
-      slime_move_22: 695541072
-      slime_move_25: 1992334072
-      slime_move_40: 1821464550
+      slime_move_up_4: -1449032883
+      slime_move_up_17: 1878248636
+      slime_move_up_42: -1288162801
+      slime_move_up_48: -1255118354
+      slime_move_up_37: 1552122363
+      slime_move_up_40: -320340150
+      slime_move_up_9: -1572861565
+      slime_move_up_8: -1046469904
+      slime_move_up_6: -1623567677
+      slime_move_up_7: 1912987858
+      slime_move_up_22: -1173481272
+      slime_move_up_0: 1436752962
+      slime_move_up_13: 1082285812
+      slime_move_up_46: -1678454429
+      slime_move_up_39: -1161026425
+      slime_move_up_45: -1934098364
+      slime_move_up_18: 766370757
+      slime_move_up_19: 606653044
+      slime_move_up_3: 111748200
+      slime_move_up_26: -1799333627
+      slime_move_up_43: -547654839
+      slime_move_up_35: 1279975336
+      slime_move_up_32: 2029098186
+      slime_move_up_2: 287157879
+      slime_move_up_14: 1169901061
+      slime_move_up_5: -2136627813
+      slime_move_up_23: -2089085260
+      slime_move_up_20: -790918402
+      slime_move_up_28: -617710504
+      slime_move_up_29: -1636722700
+      slime_move_up_1: 1525772454
+      slime_move_up_33: -424774191
+      slime_move_up_34: 1559635193
+      slime_move_up_38: 224603045
+      slime_move_up_16: -873660009
+      slime_move_up_10: -298529528
+      slime_move_up_24: 546353474
+      slime_move_up_44: -1909909992
+      slime_move_up_25: -504062563
+      slime_move_up_15: -1274416895
+      slime_move_up_30: 1717039909
+      slime_move_up_36: -1779336449
+      slime_move_up_11: 152787402
+      slime_move_up_21: -2085520268
+      slime_move_up_31: 528572245
+      slime_move_up_41: -880616089
+      slime_move_up_27: -1585134940
+      slime_move_up_12: 2106585960
+      slime_move_up_47: 14376697
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
