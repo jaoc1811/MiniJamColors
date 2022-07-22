@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [Header ("Movement")]
     [SerializeField] float speed = 2f;
+    SpriteRenderer bodySprite;
 
     [Header ("Attack")]
     [SerializeField] Transform attackPoint;
@@ -21,12 +22,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float attackDelay = 0.25f;
     [SerializeField] LayerMask enemyLayers;
 
+    // [Header ("Animation")]
+    Animator anim;
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        bodySprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate() {
         rb.velocity = movementVector * speed;
+        anim.SetFloat("Speed", rb.velocity.magnitude);
+        if (movementVector.x < 0) {
+            bodySprite.flipX = true;
+        } else if (movementVector.x > 0) {
+            bodySprite.flipX = false;
+        }
     }
 
     private void OnMove(InputValue movementValue) {
