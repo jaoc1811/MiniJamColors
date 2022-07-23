@@ -1524,16 +1524,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScale: {x: 0, y: 0, z: 0}
   maxScale: {x: 0, y: 0, z: 0}
-  scaleDuration: 0
+  scaleDuration: 0.5
   speed: 2
   isInvincible: 0
   invincibleDelay: 1
   attackPoint: {fileID: 636339915}
   attackRange: 0.33
-  attackDelay: 0.25
+  attackDelay: 0.4
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
+  attackSound: {fileID: 8300000, guid: aa40aaf6e6525e84db2ae3d8dad99415, type: 3}
+  mergeSound: {fileID: 8300000, guid: 9d699ecb75d031b4bb4bc3c2f06a3773, type: 3}
+  dodgeSound: {fileID: 8300000, guid: 0e7a5a466f6cf244dab5a568a70a92c5, type: 3}
 --- !u!50 &821498496
 Rigidbody2D:
   serializedVersion: 4
@@ -3816,10 +3819,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 3015334210643530862, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
-      propertyPath: lives
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3015334210643530863, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3863,14 +3862,6 @@ PrefabInstance:
     - target: {fileID: 3015334210643530863, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3015334211184057231, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 60618080, guid: 1505ddc76e50b9b4e8eca198a626701e, type: 3}
-    - target: {fileID: 3015334211184057231, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}

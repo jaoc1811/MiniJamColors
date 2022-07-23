@@ -27,8 +27,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float attackRange = 0.33f;
     [SerializeField] float attackDelay = 0.25f;
     [SerializeField] LayerMask enemyLayers;
-
     [SerializeField] GameObject enemyPrefab;
+
+    [Header("Audio")]
+    [SerializeField] AudioClip attackSound;
+    [SerializeField] AudioClip mergeSound;
+    [SerializeField] AudioClip dodgeSound;
 
     // [Header ("Animation")]
     Animator anim;
@@ -84,6 +88,7 @@ public class PlayerController : MonoBehaviour
     void attack() {
         // Play animation
         attackPoint.GetComponent<WeaponController>().Enable();
+        AudioSource.PlayClipAtPoint(attackSound, transform.position);
         canAttack = false;
         StartCoroutine(attackRecharge());
     }
@@ -109,6 +114,7 @@ public class PlayerController : MonoBehaviour
             isDodging = true;
             canAttack = false;
             anim.SetBool("Dodge", true);
+            AudioSource.PlayClipAtPoint(dodgeSound, transform.position);
             speed *= 2;
             StartCoroutine(DodgeRecharge());
         }
@@ -128,10 +134,11 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.collider.CompareTag("Enemy") && !isDodging) {
             // Trigger Animation
+            anim.Play("Hit");
             // Merge
             Vector3 newScale = currentScale + other.transform.localScale;
             currentScale = newScale.x > maxScale.x ? maxScale : newScale;
-            anim.Play("Hit");
+            AudioSource.PlayClipAtPoint(mergeSound, transform.position);
             //StartCoroutine(scaleOverTime(transform.localScale + other.transform.localScale));
             Destroy(other.gameObject);
         }
