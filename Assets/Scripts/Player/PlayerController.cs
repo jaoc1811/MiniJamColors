@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     bool canAttack = true;
 
     [SerializeField] Vector3 currentScale;
+    [SerializeField] Vector3 maxScale;
     [SerializeField] float scaleDuration;
 
     [Header ("Movement")]
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
         bodySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         initialSpeed = speed;
+        maxScale = transform.localScale;
         currentScale = transform.localScale;
         StartCoroutine(scaleOverTime());
     }
@@ -128,7 +130,8 @@ private void OnCollisionEnter2D(Collision2D other) {
 
             // Merge
             Debug.Log(transform.localScale + other.transform.localScale);
-            currentScale += other.transform.localScale;
+            Vector3 newScale = currentScale + other.transform.localScale;
+            currentScale = newScale.x > maxScale.x ? maxScale : newScale;
             //StartCoroutine(scaleOverTime(transform.localScale + other.transform.localScale));
             Destroy(other.gameObject);
         }
