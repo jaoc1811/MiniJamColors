@@ -23,6 +23,9 @@ public class Enemy : MonoBehaviour
     bool invulnerable = false;
     bool dead = false;
     Rigidbody2D rb;
+    [Header("Audio")]
+    [SerializeField] AudioClip jump;
+    [SerializeField] AudioClip death;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -54,6 +57,7 @@ public class Enemy : MonoBehaviour
         }
         if (!spawn)
             yield return new WaitForSeconds(1);
+        AudioSource.PlayClipAtPoint(jump, transform.position);
         bodyAnimator.SetBool("jumping", true);
         shadowAnimator.SetBool("jumping", true);
         verticalVelocity = spawn ? 2f : Random.Range(verticalSpeed.x,verticalSpeed.y);
@@ -76,6 +80,7 @@ public class Enemy : MonoBehaviour
             isGrounded = true;
             bodyAnimator.SetBool("jumping", false);
             shadowAnimator.SetBool("jumping", false);
+            AudioSource.PlayClipAtPoint(jump, transform.position);
             StartCoroutine(JumpCorroutine((target.position - transform.position).normalized, false));
         }
     }
@@ -120,6 +125,7 @@ public class Enemy : MonoBehaviour
 
     public void Die() {
         if (!invulnerable) {
+            AudioSource.PlayClipAtPoint(death, transform.position);
             StartCoroutine(DieCoroutine());
         }
     }
