@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool harakiri;
     public int enemiesKilled = 0;
     [SerializeField] int harakiriMax = 5;
+    [SerializeField] bool invincible;
+    [SerializeField] float invincibleDelay = 1f;
 
     // [Header ("Animation")]
     Animator anim;
@@ -146,7 +148,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.collider.CompareTag("Enemy") && !isDodging && !harakiri) {
+        if (other.collider.CompareTag("Enemy") && !isDodging && !harakiri && !invincible) {
             // Trigger Animation
             anim.Play("Hit");
             // Merge
@@ -180,6 +182,7 @@ public class PlayerController : MonoBehaviour
         if (transform.localScale.x <= 1) return;
         rb.velocity = new Vector2(0,0);
         harakiri = true;
+        invincible = true;
         anim.Play("Harakiri");
         enemiesKilled = 0;
         // TODO: poner la barra en 0 en el UI
@@ -194,5 +197,11 @@ public class PlayerController : MonoBehaviour
         currentScale -= Vector3.one; 
         transform.localScale = currentScale;
         harakiri = false;
+        StartCoroutine(StopInvincibleCoroutine());
+    }
+
+    IEnumerator StopInvincibleCoroutine(){
+        yield return new WaitForSeconds(invincibleDelay);
+        invincible = false;
     }
 }

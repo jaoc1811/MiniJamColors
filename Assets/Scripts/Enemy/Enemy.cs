@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour
     bool invulnerable = false;
     bool dead = false;
     Rigidbody2D rb;
-    [SerializeField] int colliderActivationDelay;
 
     [Header("Audio")]
     [SerializeField] AudioClip jump;
@@ -59,9 +58,6 @@ public class Enemy : MonoBehaviour
         colorPower();
         
         StartCoroutine(JumpCorroutine((target.position - transform.position).normalized * directionMultiplier, false));
-
-        GetComponent<CircleCollider2D>().enabled = false;
-        StartCoroutine(ActivateColliderCoroutine());
     }
 
     [ContextMenu("Stop")]
@@ -86,6 +82,7 @@ public class Enemy : MonoBehaviour
         GetComponent<Enemy>().enabled = true;
         transBody.GetComponent<Animator>().enabled = true;
         transShadow.GetComponent<Animator>().enabled = true;
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 
     private void Update() {
@@ -139,6 +136,7 @@ public class Enemy : MonoBehaviour
             GameObject rightHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             spawnHalfEnemy(rightHalf, transform.localScale, new Vector2(direction.x - 0.05f,direction.y));
         }
+        target.GetComponent<PlayerController>().enemiesKilled++;
         Destroy(gameObject);
     }
 
@@ -176,7 +174,6 @@ public class Enemy : MonoBehaviour
 
     public void Die() {
         if (!invulnerable) {
-            target.GetComponent<PlayerController>().enemiesKilled++;
             AudioSource.PlayClipAtPoint(death, transform.position);
             StartCoroutine(DieCoroutine());
         }
@@ -187,6 +184,7 @@ public class Enemy : MonoBehaviour
         bodyAnimator.Play("Die");
         shadowAnimator.Play("Die");
         yield return new WaitForSeconds(1);
+        target.GetComponent<PlayerController>().enemiesKilled++;
         Destroy(gameObject);
     }
 
@@ -212,10 +210,5 @@ public class Enemy : MonoBehaviour
                 numOfTwinChildren = 2;
                 break;
         }
-    }
-
-    IEnumerator ActivateColliderCoroutine(){
-        yield return new WaitForSeconds(colliderActivationDelay);
-        GetComponent<CircleCollider2D>().enabled = true;
     }
 }

@@ -63,7 +63,7 @@ MonoBehaviour:
   isGrounded: 1
   lives: 3
   numOfDivisions: 4
-  colliderActivationDelay: 4
+  colliderActivationDelay: 0.5
   jump: {fileID: 8300000, guid: ee32ca05ce5c62b4f9e27ecb4cae5fd7, type: 3}
   death: {fileID: 8300000, guid: 6b16fde9da56fb941a46a94c9fbfa7ea, type: 3}
   slimeColor: 0
