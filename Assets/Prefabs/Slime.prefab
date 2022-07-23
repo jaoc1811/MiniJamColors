@@ -61,7 +61,10 @@ MonoBehaviour:
   shadowSprite: {fileID: 3015334210938193793}
   enemyPrefab: {fileID: 3015334210643530832}
   isGrounded: 1
+  lives: 3
   numOfDivisions: 4
+  jump: {fileID: 8300000, guid: ee32ca05ce5c62b4f9e27ecb4cae5fd7, type: 3}
+  death: {fileID: 8300000, guid: 6b16fde9da56fb941a46a94c9fbfa7ea, type: 3}
 --- !u!58 &3015334211025732305
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -277,8 +280,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 1436417728, guid: 8299ed4a2bb67c84f8731ddb6c4bd170, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 60618080, guid: 1505ddc76e50b9b4e8eca198a626701e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

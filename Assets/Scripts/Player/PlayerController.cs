@@ -133,10 +133,10 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.collider.CompareTag("Enemy") && !isInvincible) {
             // Trigger Animation
+            anim.Play("Hit");
             // Merge
             Vector3 newScale = currentScale + other.transform.localScale;
             currentScale = newScale.x > maxScale.x ? maxScale : newScale;
-            anim.Play("Hit");
             AudioSource.PlayClipAtPoint(mergeSound, transform.position);
             //StartCoroutine(scaleOverTime(transform.localScale + other.transform.localScale));
             Destroy(other.gameObject);
