@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
     bool invulnerable = false;
     bool dead = false;
     Rigidbody2D rb;
+    [SerializeField] int colliderActivationDelay;
+
     [Header("Audio")]
     [SerializeField] AudioClip jump;
     [SerializeField] AudioClip death;
@@ -56,13 +58,33 @@ public class Enemy : MonoBehaviour
         colorPower();
         
         StartCoroutine(JumpCorroutine((target.position - transform.position).normalized * directionMultiplier, false));
+
+        GetComponent<CircleCollider2D>().enabled = false;
+        StartCoroutine(ActivateColliderCoroutine());
+    }
+
+    [ContextMenu("Stop")]
+    void stop() {
+        GetComponent<Enemy>().enabled = false;
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<Animator>().enabled = false;
+        }
+    }
+
+    [ContextMenu("Play")]
+    void play() {
+        GetComponent<Enemy>().enabled = true;
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<Animator>().enabled = true;
+        }
     }
 
     private void Awake() {
         GetComponent<Enemy>().enabled = true;
         transBody.GetComponent<Animator>().enabled = true;
         transShadow.GetComponent<Animator>().enabled = true;
-        GetComponent<CircleCollider2D>().enabled = true;
     }
 
     private void Update() {
@@ -188,5 +210,10 @@ public class Enemy : MonoBehaviour
                 numOfTwinChildren = 2;
                 break;
         }
+    }
+
+    IEnumerator ActivateColliderCoroutine(){
+        yield return new WaitForSeconds(colliderActivationDelay);
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 }
