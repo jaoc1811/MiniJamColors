@@ -13,7 +13,10 @@ public class PlayerController : MonoBehaviour
 
     [Header ("Movement")]
     [SerializeField] float speed = 2f;
+    float initialSpeed;
     SpriteRenderer bodySprite;
+    [SerializeField] bool isInvincible;
+    [SerializeField] float invincibleDelay = 1f;
 
     [Header ("Attack")]
     [SerializeField] Transform attackPoint;
@@ -29,6 +32,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bodySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        initialSpeed = speed;
     }
 
     private void FixedUpdate() {
@@ -49,6 +53,11 @@ public class PlayerController : MonoBehaviour
 
             float angle = Mathf.Atan2(movementVector.y, movementVector.x) * Mathf.Rad2Deg;
             attackPoint.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+
+        if (isInvincible && rb.velocity.magnitude < 0.1){ // Idle, move to looking side
+            float direction = attackPoint.localPosition.x > 0 ? 1 : -1;
+            rb.velocity = new Vector2(direction, 0) * speed;
         }
     }
 
@@ -89,5 +98,24 @@ public class PlayerController : MonoBehaviour
     IEnumerator attackRecharge() {
         yield return new WaitForSeconds(attackDelay);
         canAttack = true;
+    }
+
+    private void OnDodge() {
+        if (!isInvincible){
+            isInvincible = true;
+            anim.SetBool("Dodge", true);
+            speed *= 2;
+            StartCoroutine(DodgeRecharge());
+        }
+    }
+
+    IEnumerator DodgeRecharge() {
+        yield return new WaitForSeconds(invincibleDelay);
+        isInvincible = false;
+    }
+
+    void StopDodge(){
+        speed = initialSpeed;
+        anim.SetBool("Dodge", false);
     }
 }
