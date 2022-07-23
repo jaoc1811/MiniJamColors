@@ -18,8 +18,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] SpriteRenderer shadowSprite;
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] bool isGrounded = true;
+    [SerializeField] int lives;
     public int numOfDivisions = 2;
-    bool invulnerable;
+    bool invulnerable = false;
     bool dead = false;
 
     private void Start() {
@@ -77,18 +78,40 @@ public class Enemy : MonoBehaviour
 
     [ContextMenu("Dividir")]
     public void Divide(Vector3 direction) {
-        if (!invulnerable) {
             Destroy(gameObject);
             GameObject leftHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             leftHalf.transform.localScale = transform.localScale - Vector3.one;
-            leftHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x + 0.05f,direction.y));
+            leftHalf.GetComponent<Enemy>().KnockBack(new Vector2(direction.x + 0.05f,direction.y));
             leftHalf.GetComponent<Enemy>().numOfDivisions -= 1; 
             GameObject rightHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             rightHalf.transform.localScale = transform.localScale - Vector3.one;
-            rightHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x - 0.05f,direction.y));
+            rightHalf.GetComponent<Enemy>().KnockBack(new Vector2(direction.x - 0.05f,direction.y));
             rightHalf.GetComponent<Enemy>().numOfDivisions -= 1; 
+    }
 
+    public void TakeDamage(Vector3 direction) {
+        Debug.Log(invulnerable);
+        if (!invulnerable) {
+            if(lives > 1) {
+                KnockBack(direction);
+                bodyAnimator.Play("Hit");
+                shadowAnimator.Play("Hit");
+                lives--;
+            } else {
+                Divide(direction);
+            }
         }
+    }
+
+    public void KnockBack(Vector2 direction) {
+        invulnerable = true;
+        StartCoroutine(damageProtection());
+        StartCoroutine(JumpCorroutine(direction, true));
+    }
+
+    IEnumerator damageProtection() {
+        yield return new WaitForSeconds(2);
+        invulnerable = false;
     }
 
     public void Die() {
@@ -106,14 +129,4 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Spawn(Vector2 direction) {
-        invulnerable = true;
-        StartCoroutine(spawnProtection());
-        StartCoroutine(JumpCorroutine(direction, true));
-    }
-
-    IEnumerator spawnProtection() {
-        yield return new WaitForSeconds(1);
-        invulnerable = false;
-    }
 }
