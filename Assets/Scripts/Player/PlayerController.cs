@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 2f;
     float initialSpeed;
     SpriteRenderer bodySprite;
-    [SerializeField] bool isInvincible;
+    [SerializeField] bool isDodging;
     [SerializeField] float invincibleDelay = 1f;
 
     [Header ("Attack")]
@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float attackRange = 0.33f;
     [SerializeField] float attackDelay = 0.25f;
     [SerializeField] LayerMask enemyLayers;
+
+    [SerializeField] GameObject enemyPrefab;
 
     // [Header ("Animation")]
     Animator anim;
@@ -61,7 +63,7 @@ public class PlayerController : MonoBehaviour
             attackPoint.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-        if (isInvincible && rb.velocity.magnitude < 0.1){ // Idle, move to looking side
+        if (isDodging && rb.velocity.magnitude < 0.1){ // Idle, move to looking side
             float direction = attackPoint.localPosition.x > 0 ? 1 : -1;
             rb.velocity = new Vector2(direction, 0) * speed;
         }
@@ -96,15 +98,15 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator attackRecharge() {
         yield return new WaitForSeconds(attackDelay);
-        if (!isInvincible){ // To prevent attacks when dodging
+        if (!isDodging){ // To prevent attacks when dodging
             canAttack = true;
         }
         
     }
 
     private void OnDodge() {
-        if (!isInvincible){
-            isInvincible = true;
+        if (!isDodging){
+            isDodging = true;
             canAttack = false;
             anim.SetBool("Dodge", true);
             speed *= 2;
@@ -114,7 +116,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator DodgeRecharge() {
         yield return new WaitForSeconds(invincibleDelay);
-        isInvincible = false;
+        isDodging = false;
     }
 
     void StopDodge(){
@@ -124,7 +126,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.collider.CompareTag("Enemy") && !isInvincible) {
+        if (other.collider.CompareTag("Enemy") && !isDodging) {
             // Trigger Animation
             // Merge
             Vector3 newScale = currentScale + other.transform.localScale;
@@ -149,5 +151,21 @@ public class PlayerController : MonoBehaviour
             }
             yield return new WaitForEndOfFrame();
         }
+    }
+
+    [ContextMenu("Harakiri")]
+    void Harakiri(){
+        // TODO: acercar la camara
+        anim.Play("Harakiri");
+    }
+
+    void EndHarakiri(){
+        // Instantiate enemy and knockback
+        GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        float offsetDirection = attackPoint.localPosition.x > 0 ? 1 : -1;
+        enemy.GetComponent<Enemy>().spawnHalfEnemy(enemy, transform.localScale, new Vector2(attackPoint.localPosition.x+offsetDirection, attackPoint.localPosition.y));
+        // Change player scale
+        currentScale -= Vector3.one; 
+        transform.localScale = currentScale;
     }
 }
