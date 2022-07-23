@@ -2130,6 +2130,7 @@ GameObject:
   - component: {fileID: 276004125}
   - component: {fileID: 276004124}
   - component: {fileID: 276004123}
+  - component: {fileID: 276004126}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -2285,7 +2286,6 @@ MonoBehaviour:
   invincibleDelay: 1
   attackPoint: {fileID: 1950654101}
   attackRange: 0.33
-  attackRadius: 0.33
   attackDelay: 1
   enemyLayers:
     serializedVersion: 2
@@ -2310,7 +2310,23 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!70 &276004126
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276004118}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00793573, y: 0.22114973}
+  m_Size: {x: 0.5620115, y: 0.4350522}
+  m_Direction: 1
 --- !u!1 &585789876
 GameObject:
   m_ObjectHideFlags: 0
