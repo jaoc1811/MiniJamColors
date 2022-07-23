@@ -225,9 +225,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  isInvincible: 0
+  invincibleDelay: 1
   attackPoint: {fileID: 465562530}
   attackRange: 0.33
-  attackRadius: 0.45
   attackDelay: 0.25
   enemyLayers:
     serializedVersion: 2
@@ -435,8 +436,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.9, y: 2}
+  m_Offset: {x: 0.09, y: 0}
+  m_Size: {x: 0.7, y: 1.54}
   m_Direction: 0
 --- !u!1 &1203448653
 GameObject:
@@ -532,6 +533,14 @@ PrefabInstance:
     - target: {fileID: 3015334210643530832, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
       propertyPath: m_Name
       value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015334210643530832, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015334210643530832, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3015334210643530863, guid: 4d7670daff85379469d9149e24c8b9d4, type: 3}
       propertyPath: m_RootOrder

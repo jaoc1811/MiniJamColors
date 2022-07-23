@@ -30,8 +30,10 @@ public class WeaponController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        other.GetComponent<Enemy>().Divide(new  Vector3(transform.localPosition.x, transform.localPosition.y - 0.2f, 0));
-        Debug.Log(other.name);
+        if (other.CompareTag("Enemy")) {
+            other.GetComponent<Enemy>().Divide(new  Vector3(transform.localPosition.x, transform.localPosition.y - 0.2f, 0));
+            Debug.Log(other.name);
+        }
     }
 
     public bool isAttacking() {
