@@ -31,15 +31,20 @@ public class Enemy : MonoBehaviour
     [SerializeField] SlimeColor slimeColor;
     int directionMultiplier = 1;
     float velocityMultiplier = 1;
+    float jumpDelay = 1;
+    int numOfTwinChildren = 1;
 
     enum SlimeColor {
         Yellow,     // 0
         Red,        // 1
-        Blue,        // 2
+        Blue,       // 2
+        Green,      // 3
+        Magenta,    // 4
+        Cyan,       // 5
         COUNT       // max
     }
 
-    Color[] colors = {Color.yellow, Color.red, Color.blue};
+    Color[] colors = {Color.yellow, Color.red, Color.blue, Color.green, Color.magenta, Color.cyan};
     
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -75,7 +80,7 @@ public class Enemy : MonoBehaviour
             shadowSprite.flipX = false;
         }
         if (!spawn)
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(jumpDelay);
         AudioSource.PlayClipAtPoint(jump, transform.position);
         bodyAnimator.SetBool("jumping", true);
         shadowAnimator.SetBool("jumping", true);
@@ -105,11 +110,13 @@ public class Enemy : MonoBehaviour
 
     [ContextMenu("Dividir")]
     public void Divide(Vector3 direction) {
-            Destroy(gameObject);
+        for (int i = 0; i < numOfTwinChildren; i++) {
             GameObject leftHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             spawnHalfEnemy(leftHalf, transform.localScale,new Vector2(direction.x + 0.05f,direction.y));
             GameObject rightHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             spawnHalfEnemy(rightHalf, transform.localScale, new Vector2(direction.x - 0.05f,direction.y));
+        }
+        Destroy(gameObject);
     }
 
     public void spawnHalfEnemy(GameObject enemy, Vector3 scale, Vector2 enemyKnockBackDirection){
@@ -169,7 +176,16 @@ public class Enemy : MonoBehaviour
                 lives = (int)(lives * 1.5f);
                 break;
             case SlimeColor.Blue:
-            velocityMultiplier = 1.5f;
+                velocityMultiplier = 1.5f;
+                break;
+            case SlimeColor.Green:
+                speed = Vector2.zero;
+                break;
+            case SlimeColor.Magenta:
+                jumpDelay = 0.5f;
+                break;
+            case SlimeColor.Cyan:
+                numOfTwinChildren = 2;
                 break;
         }
     }
