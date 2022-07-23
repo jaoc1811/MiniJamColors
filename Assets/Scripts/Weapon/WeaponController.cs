@@ -32,11 +32,10 @@ public class WeaponController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Enemy")) {
             if (other.GetComponent<Enemy>().numOfDivisions > 0 ){
-                other.GetComponent<Enemy>().Divide(new  Vector3(transform.localPosition.x, transform.localPosition.y - 0.2f, 0));
+                other.GetComponent<Enemy>().TakeDamage(new  Vector3(transform.localPosition.x, transform.localPosition.y - 0.2f, 0));
             } else {
                 other.GetComponent<Enemy>().Die();
             }
-            Debug.Log(other.name);
         }
     }
 
