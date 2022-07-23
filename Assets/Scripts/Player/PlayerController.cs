@@ -123,15 +123,13 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Dodge", false);
     }
 
-private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other) {
         if (other.collider.CompareTag("Enemy") && !isInvincible) {
-            Debug.Log("TRIGGER");
             // Trigger Animation
-
             // Merge
-            Debug.Log(transform.localScale + other.transform.localScale);
             Vector3 newScale = currentScale + other.transform.localScale;
             currentScale = newScale.x > maxScale.x ? maxScale : newScale;
+            anim.Play("Hit");
             //StartCoroutine(scaleOverTime(transform.localScale + other.transform.localScale));
             Destroy(other.gameObject);
         }
