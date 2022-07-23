@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer bodySprite;
     [SerializeField] bool isDodging;
     [SerializeField] float dodgeDelay = 1f;
-    [SerializeField] bool harakiri;
 
     [Header ("Attack")]
     [SerializeField] Transform attackPoint;
@@ -34,6 +33,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip attackSound;
     [SerializeField] AudioClip mergeSound;
     [SerializeField] AudioClip dodgeSound;
+
+    [Header("Harakiri")]
+    [SerializeField] bool harakiri;
+    public int enemiesKilled = 0;
+    [SerializeField] int harakiriMax = 5;
 
     // [Header ("Animation")]
     Animator anim;
@@ -48,7 +52,15 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(scaleOverTime());
     }
 
+    private void Update() {
+        if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || enemiesKilled >= harakiriMax) && transform.localScale.x > 1){
+            Harakiri();
+        }
+    }
+
     private void FixedUpdate() {
+        if (harakiri) return;
+
         rb.velocity = movementVector * speed;
         anim.SetFloat("Speed", rb.velocity.magnitude);
 
@@ -82,7 +94,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnFire() {
-        if (canAttack && !harakiri) {
+        if (canAttack) {
             attack();
         }
     }
@@ -166,8 +178,11 @@ public class PlayerController : MonoBehaviour
     void Harakiri(){
         // TODO: acercar la camara, parar todo
         if (transform.localScale.x <= 1) return;
+        rb.velocity = new Vector2(0,0);
         harakiri = true;
         anim.Play("Harakiri");
+        enemiesKilled = 0;
+        // TODO: poner la barra en 0 en el UI
     }
 
     void EndHarakiri(){

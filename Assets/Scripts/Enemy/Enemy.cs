@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         lives = (int)transform.localScale.x;
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        numOfDivisions = (int)transform.localScale.x - 1;
 
         slimeColor = (SlimeColor)Random.Range(0, ((int)SlimeColor.COUNT));
         transBody.GetComponent<SpriteRenderer>().color = colors[(int)slimeColor];
@@ -150,6 +151,7 @@ public class Enemy : MonoBehaviour
 
     public void Die() {
         if (!invulnerable) {
+            target.GetComponent<PlayerController>().enemiesKilled++;
             AudioSource.PlayClipAtPoint(death, transform.position);
             StartCoroutine(DieCoroutine());
         }
