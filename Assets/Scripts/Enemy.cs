@@ -18,7 +18,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] SpriteRenderer shadowSprite;
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] bool isGrounded = true;
+    public int numOfDivisions = 2;
     bool invulnerable;
+    bool dead = false;
 
     private void Start() {
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -56,7 +58,7 @@ public class Enemy : MonoBehaviour
 
 
     void UpdatePosition() {
-        if (!isGrounded){
+        if (!isGrounded && !dead){
             transform.position += (Vector3)groundVelocity * Time.deltaTime;
             verticalVelocity += gravity * Time.deltaTime;
             transBody.position += new Vector3(0,verticalVelocity,0) * Time.deltaTime;
@@ -64,7 +66,7 @@ public class Enemy : MonoBehaviour
     }
 
     void CheckGroundHit() {
-        if(transBody.position.y < transform.position.y && !isGrounded) {
+        if(transBody.position.y < transform.position.y && !isGrounded && !dead) {
             transBody.position = transform.position;
             isGrounded = true;
             bodyAnimator.SetBool("jumping", false);
@@ -76,15 +78,32 @@ public class Enemy : MonoBehaviour
     [ContextMenu("Dividir")]
     public void Divide(Vector3 direction) {
         if (!invulnerable) {
-            Debug.Log(direction);
             Destroy(gameObject);
-            GameObject leftHalf = Instantiate(enemyPrefab,transform.position,Quaternion.identity);
-            leftHalf.transform.localScale = transform.localScale / 2;
+            GameObject leftHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            leftHalf.transform.localScale = transform.localScale - Vector3.one;
             leftHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x + 0.05f,direction.y));
-            GameObject rightHalf = Instantiate(enemyPrefab,transform.position,Quaternion.identity);
-            rightHalf.transform.localScale = transform.localScale / 2;
+            leftHalf.GetComponent<Enemy>().numOfDivisions -= 1; 
+            GameObject rightHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            rightHalf.transform.localScale = transform.localScale - Vector3.one;
             rightHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x - 0.05f,direction.y));
+            rightHalf.GetComponent<Enemy>().numOfDivisions -= 1; 
+
         }
+    }
+
+    public void Die() {
+        if (!invulnerable) {
+            StartCoroutine(DieCoroutine());
+        }
+    }
+
+    
+    IEnumerator DieCoroutine() {
+        dead = true;
+        bodyAnimator.Play("Die");
+        shadowAnimator.Play("Die");
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 
     public void Spawn(Vector2 direction) {

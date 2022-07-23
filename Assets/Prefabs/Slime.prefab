@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3015334210643530863}
   - component: {fileID: 3015334210643530862}
   - component: {fileID: 3015334211025732305}
+  - component: {fileID: 1220611845}
   m_Layer: 6
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +77,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.234375}
   serializedVersion: 2
   m_Radius: 0.296875
+--- !u!50 &1220611845
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015334210643530832}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &3015334210938193796
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +277,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2133238239, guid: 8299ed4a2bb67c84f8731ddb6c4bd170, type: 3}
+  m_Sprite: {fileID: 1436417728, guid: 8299ed4a2bb67c84f8731ddb6c4bd170, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
