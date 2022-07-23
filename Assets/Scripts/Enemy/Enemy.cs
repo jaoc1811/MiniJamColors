@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
     }
 
     [ContextMenu("Stop")]
-    void stop() {
+    public void Stop() {
         GetComponent<Enemy>().enabled = false;
         foreach (Transform child in transform)
         {
@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
     }
 
     [ContextMenu("Play")]
-    void play() {
+    public void Play() {
         GetComponent<Enemy>().enabled = true;
         foreach (Transform child in transform)
         {

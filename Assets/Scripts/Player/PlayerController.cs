@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
-        if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || enemiesKilled >= harakiriMax) && transform.localScale.x > 1){
+        if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || enemiesKilled >= harakiriMax) && transform.localScale.x > 1 && !harakiri){
             Harakiri();
         }
     }
@@ -178,14 +178,33 @@ public class PlayerController : MonoBehaviour
 
     [ContextMenu("Harakiri")]
     void Harakiri(){
-        // TODO: acercar la camara, parar todo
         if (transform.localScale.x <= 1) return;
         rb.velocity = new Vector2(0,0);
         harakiri = true;
         invincible = true;
-        anim.Play("Harakiri");
         enemiesKilled = 0;
+        StartCoroutine(HarakiriCoroutine());
+        // TODO: acercar la camara, parar todo
         // TODO: poner la barra en 0 en el UI
+    }
+
+    IEnumerator HarakiriCoroutine() {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Enemy>().Stop();
+        }
+        yield return new WaitForSeconds(1);
+        FindObjectOfType<CameraScript>().ZoomToPlayer();
+        yield return new WaitForSeconds(1f);
+        anim.Play("Harakiri");
+        yield return new WaitForSeconds(1f);
+        FindObjectOfType<CameraScript>().ZoomOut();
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Enemy>().Play();
+        }
+
     }
 
     void EndHarakiri(){
