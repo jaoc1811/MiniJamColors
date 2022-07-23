@@ -108,6 +108,7 @@ public class Enemy : MonoBehaviour
 
     public void KnockBack(Vector2 direction) {
         invulnerable = true;
+        StopAllCoroutines();
         StartCoroutine(damageProtection());
         StartCoroutine(JumpCorroutine(direction, true));
     }
