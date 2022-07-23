@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
     float initialSpeed;
     SpriteRenderer bodySprite;
     [SerializeField] bool isDodging;
-    [SerializeField] float invincibleDelay = 1f;
+    [SerializeField] float dodgeDelay = 1f;
+    [SerializeField] bool harakiri;
 
     [Header ("Attack")]
     [SerializeField] Transform attackPoint;
@@ -67,20 +68,21 @@ public class PlayerController : MonoBehaviour
             attackPoint.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-        if (isDodging && rb.velocity.magnitude < 0.1){ // Idle, move to looking side
-            float direction = attackPoint.localPosition.x > 0 ? 1 : -1;
-            rb.velocity = new Vector2(direction, 0) * speed;
-        }
+        // if (isDodging && rb.velocity.magnitude < 0.1){ // Idle, move to looking side
+        //     float direction = attackPoint.localPosition.x > 0 ? 1 : -1;
+        //     rb.velocity = new Vector2(direction, 0) * speed;
+        // }
     }
 
     private void OnMove(InputValue movementValue) {
+        if (harakiri) return;
         // Player Move
         movementVector = movementValue.Get<Vector2>();
         anim.SetFloat("Vertical", movementVector.y);
     }
 
     private void OnFire() {
-        if (canAttack) {
+        if (canAttack && !harakiri) {
             attack();
         }
     }
@@ -110,7 +112,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnDodge() {
-        if (!isDodging){
+        if ((!isDodging) && !harakiri){
             isDodging = true;
             canAttack = false;
             anim.SetBool("Dodge", true);
@@ -121,7 +123,7 @@ public class PlayerController : MonoBehaviour
     }
 
     IEnumerator DodgeRecharge() {
-        yield return new WaitForSeconds(invincibleDelay);
+        yield return new WaitForSeconds(dodgeDelay);
         isDodging = false;
     }
 
@@ -132,7 +134,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.collider.CompareTag("Enemy") && !isDodging) {
+        if (other.collider.CompareTag("Enemy") && !isDodging && !harakiri) {
             // Trigger Animation
             anim.Play("Hit");
             // Merge
@@ -162,7 +164,9 @@ public class PlayerController : MonoBehaviour
 
     [ContextMenu("Harakiri")]
     void Harakiri(){
-        // TODO: acercar la camara
+        // TODO: acercar la camara, parar todo
+        if (transform.localScale.x <= 1) return;
+        harakiri = true;
         anim.Play("Harakiri");
     }
 
@@ -174,5 +178,6 @@ public class PlayerController : MonoBehaviour
         // Change player scale
         currentScale -= Vector3.one; 
         transform.localScale = currentScale;
+        harakiri = false;
     }
 }

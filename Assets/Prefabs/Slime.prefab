@@ -63,8 +63,10 @@ MonoBehaviour:
   isGrounded: 1
   lives: 3
   numOfDivisions: 4
+  colliderActivationDelay: 4
   jump: {fileID: 8300000, guid: ee32ca05ce5c62b4f9e27ecb4cae5fd7, type: 3}
   death: {fileID: 8300000, guid: 6b16fde9da56fb941a46a94c9fbfa7ea, type: 3}
+  slimeColor: 0
 --- !u!58 &3015334211025732305
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -100,7 +102,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &3015334210938193796
 GameObject:
