@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnFire() {
+        if (harakiri) return;
         if (canAttack) {
             attack();
         }
@@ -202,7 +203,8 @@ public class PlayerController : MonoBehaviour
         FindObjectOfType<CameraScript>().ZoomOut();
         foreach (GameObject enemy in enemies)
         {
-            enemy.GetComponent<Enemy>().Play();
+            if (enemy != null)
+                enemy.GetComponent<Enemy>().Play();
         }
 
     }

@@ -200,7 +200,7 @@ public class Enemy : MonoBehaviour
                 velocityMultiplier = 1.5f;
                 break;
             case SlimeColor.Green:
-                velocityMultiplier = 0;
+                directionMultiplier = 0;
                 break;
             case SlimeColor.Magenta:
                 jumpDelay = 0.5f;
