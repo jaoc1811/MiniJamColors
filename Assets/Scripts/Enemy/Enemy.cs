@@ -83,16 +83,17 @@ public class Enemy : MonoBehaviour
     [ContextMenu("Dividir")]
     public void Divide(Vector3 direction) {
             Destroy(gameObject);
-            GameObject leftHalf = createHalfEnemy(new Vector2(direction.x + 0.05f,direction.y));
-            GameObject rightHalf = createHalfEnemy(new Vector2(direction.x - 0.05f,direction.y));
+            GameObject leftHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            spawnHalfEnemy(leftHalf, transform.localScale,new Vector2(direction.x + 0.05f,direction.y));
+            GameObject rightHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            spawnHalfEnemy(rightHalf, transform.localScale, new Vector2(direction.x - 0.05f,direction.y));
     }
 
-    public GameObject createHalfEnemy(Vector2 enemyKnockBackDirection){
-        GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-        enemy.transform.localScale = transform.localScale - Vector3.one;
+    public void spawnHalfEnemy(GameObject enemy, Vector3 scale, Vector2 enemyKnockBackDirection){
+        enemy.transform.localScale = scale - Vector3.one;
         enemy.GetComponent<Enemy>().KnockBack(enemyKnockBackDirection);
-        enemy.GetComponent<Enemy>().numOfDivisions -= 1;
-        return enemy;
+        // enemy.GetComponent<Enemy>().numOfDivisions -= 1;
+        enemy.GetComponent<Enemy>().numOfDivisions = (int)scale.x - 1;
     }
 
     public void TakeDamage(Vector3 direction) {
