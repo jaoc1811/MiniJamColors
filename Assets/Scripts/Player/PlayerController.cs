@@ -67,21 +67,6 @@ public class PlayerController : MonoBehaviour
     void attack() {
         // Play animation
         attackPoint.GetComponent<WeaponController>().Enable();
-
-        // Swing blade / detect enemies in range
-        //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayers);
-        Collider2D[] hitEnemies = new Collider2D[10];
-        ContactFilter2D filter2D = new ContactFilter2D();
-        filter2D.SetLayerMask(enemyLayers);
-        int numberOfHitEnemies = Physics2D.OverlapCollider(attackPoint.GetComponent<CapsuleCollider2D>(), filter2D, hitEnemies);
-
-        // Damage
-        for (int i = 0; i < numberOfHitEnemies; i++) {
-            Collider2D enemy = hitEnemies[i];
-            if (enemy != null) {
-                enemy.GetComponent<Enemy>().Divide(new Vector3(attackPoint.localPosition.x,attackPoint.localPosition.y - 0.2f, 0));
-            }
-        }
         canAttack = false;
         StartCoroutine(attackRecharge());
     }
