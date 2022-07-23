@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] SpriteRenderer shadowSprite;
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] bool isGrounded = true;
+    bool invulnerable;
 
     private void Start() {
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -74,17 +75,26 @@ public class Enemy : MonoBehaviour
 
     [ContextMenu("Dividir")]
     public void Divide(Vector3 direction) {
-        Debug.Log(direction);
-        Destroy(gameObject);
-        GameObject leftHalf = Instantiate(enemyPrefab,transform.position,Quaternion.identity);
-        leftHalf.transform.localScale = transform.localScale / 2;
-        leftHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x + 0.05f,direction.y));
-        GameObject rightHalf = Instantiate(enemyPrefab,transform.position,Quaternion.identity);
-        rightHalf.transform.localScale = transform.localScale / 2;
-        rightHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x - 0.05f,direction.y));
+        if (!invulnerable) {
+            Debug.Log(direction);
+            Destroy(gameObject);
+            GameObject leftHalf = Instantiate(enemyPrefab,transform.position,Quaternion.identity);
+            leftHalf.transform.localScale = transform.localScale / 2;
+            leftHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x + 0.05f,direction.y));
+            GameObject rightHalf = Instantiate(enemyPrefab,transform.position,Quaternion.identity);
+            rightHalf.transform.localScale = transform.localScale / 2;
+            rightHalf.GetComponent<Enemy>().Spawn(new Vector2(direction.x - 0.05f,direction.y));
+        }
     }
 
     public void Spawn(Vector2 direction) {
+        invulnerable = true;
+        StartCoroutine(spawnProtection());
         StartCoroutine(JumpCorroutine(direction, true));
+    }
+
+    IEnumerator spawnProtection() {
+        yield return new WaitForSeconds(1);
+        invulnerable = false;
     }
 }
