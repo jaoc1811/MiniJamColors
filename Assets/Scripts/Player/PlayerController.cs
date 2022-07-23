@@ -90,12 +90,16 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator attackRecharge() {
         yield return new WaitForSeconds(attackDelay);
-        canAttack = true;
+        if (!isInvincible){ // To prevent attacks when dodging
+            canAttack = true;
+        }
+        
     }
 
     private void OnDodge() {
         if (!isInvincible){
             isInvincible = true;
+            canAttack = false;
             anim.SetBool("Dodge", true);
             speed *= 2;
             StartCoroutine(DodgeRecharge());
@@ -109,6 +113,7 @@ public class PlayerController : MonoBehaviour
 
     void StopDodge(){
         speed = initialSpeed;
+        canAttack = true;
         anim.SetBool("Dodge", false);
     }
 }
