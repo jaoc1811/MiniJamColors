@@ -24,11 +24,30 @@ public class Enemy : MonoBehaviour
     bool dead = false;
     Rigidbody2D rb;
 
+    [Header("SlimePower")]
+    [SerializeField] SlimeColor slimeColor;
+    int directionMultiplier = 1;
+    float velocityMultiplier = 1;
+
+    enum SlimeColor {
+        Yellow,     // 0
+        Red,        // 1
+        Blue,        // 2
+        COUNT       // max
+    }
+
+    Color[] colors = {Color.yellow, Color.red, Color.blue};
+    
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         lives = (int)transform.localScale.x;
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        StartCoroutine(JumpCorroutine((target.position - transform.position).normalized, false));
+
+        slimeColor = (SlimeColor)Random.Range(0, ((int)SlimeColor.COUNT));
+        transBody.GetComponent<SpriteRenderer>().color = colors[(int)slimeColor];
+        colorPower();
+        
+        StartCoroutine(JumpCorroutine((target.position - transform.position).normalized * directionMultiplier, false));
     }
 
     private void Awake() {
@@ -57,10 +76,9 @@ public class Enemy : MonoBehaviour
         bodyAnimator.SetBool("jumping", true);
         shadowAnimator.SetBool("jumping", true);
         verticalVelocity = spawn ? 2f : Random.Range(verticalSpeed.x,verticalSpeed.y);
-        groundVelocity = direction.normalized * Random.Range(speed.x,speed.y);
+        groundVelocity = direction.normalized * Random.Range(speed.x,speed.y) * velocityMultiplier;
         isGrounded = false;
     }
-
 
     void UpdatePosition() {
         if (!isGrounded && !dead){
@@ -76,7 +94,7 @@ public class Enemy : MonoBehaviour
             isGrounded = true;
             bodyAnimator.SetBool("jumping", false);
             shadowAnimator.SetBool("jumping", false);
-            StartCoroutine(JumpCorroutine((target.position - transform.position).normalized, false));
+            StartCoroutine(JumpCorroutine((target.position - transform.position).normalized * directionMultiplier, false));
         }
     }
 
@@ -130,5 +148,20 @@ public class Enemy : MonoBehaviour
         shadowAnimator.Play("Die");
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
+    }
+
+    [ContextMenu("ColorPower")]
+    private void colorPower() {
+        switch(slimeColor) {
+            case SlimeColor.Yellow:
+                directionMultiplier = -1;
+                break;
+            case SlimeColor.Red:
+                lives = (int)(lives * 1.5f);
+                break;
+            case SlimeColor.Blue:
+            velocityMultiplier = 1.5f;
+                break;
+        }
     }
 }
