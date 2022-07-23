@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioClip death;
 
     [Header("SlimePower")]
-    [SerializeField] SlimeColor slimeColor;
+    SlimeColor slimeColor;
     int directionMultiplier = 1;
     float velocityMultiplier = 1;
     float jumpDelay = 1;
@@ -188,7 +188,6 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    [ContextMenu("ColorPower")]
     private void colorPower() {
         switch(slimeColor) {
             case SlimeColor.Yellow:
@@ -201,7 +200,7 @@ public class Enemy : MonoBehaviour
                 velocityMultiplier = 1.5f;
                 break;
             case SlimeColor.Green:
-                speed = Vector2.zero;
+                velocityMultiplier = 0;
                 break;
             case SlimeColor.Magenta:
                 jumpDelay = 0.5f;
