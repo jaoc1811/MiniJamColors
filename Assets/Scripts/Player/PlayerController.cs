@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     Vector2 movementVector;
     bool canAttack = true;
 
+    [SerializeField] Vector3 currentScale;
+    [SerializeField] float scaleDuration;
+
     [Header ("Movement")]
     [SerializeField] float speed = 2f;
     float initialSpeed;
@@ -32,6 +35,8 @@ public class PlayerController : MonoBehaviour
         bodySprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         initialSpeed = speed;
+        currentScale = transform.localScale;
+        StartCoroutine(scaleOverTime());
     }
 
     private void FixedUpdate() {
@@ -114,5 +119,34 @@ public class PlayerController : MonoBehaviour
         speed = initialSpeed;
         canAttack = true;
         anim.SetBool("Dodge", false);
+    }
+
+private void OnCollisionEnter2D(Collision2D other) {
+        if (other.collider.CompareTag("Enemy")) {
+            Debug.Log("TRIGGER");
+            // Trigger Animation
+
+            // Merge
+            Debug.Log(transform.localScale + other.transform.localScale);
+            currentScale += other.transform.localScale;
+            //StartCoroutine(scaleOverTime(transform.localScale + other.transform.localScale));
+            Destroy(other.gameObject);
+        }
+    }
+
+    IEnumerator scaleOverTime() {
+        while (true) {
+            if (currentScale.x > transform.localScale.x) {
+                Vector3 originalScale = transform.localScale;
+                float counter = 0;
+                while (counter < scaleDuration) {
+                    transform.localScale = Vector3.Lerp(originalScale, currentScale, counter/scaleDuration);
+                    counter += Time.deltaTime;
+                    yield return null;
+                }
+                transform.localScale = currentScale;
+            }
+            yield return new WaitForEndOfFrame();
+        }
     }
 }
