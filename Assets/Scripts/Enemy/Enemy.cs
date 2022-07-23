@@ -23,6 +23,9 @@ public class Enemy : MonoBehaviour
     bool invulnerable = false;
     bool dead = false;
     Rigidbody2D rb;
+    [Header("Audio")]
+    [SerializeField] AudioClip jump;
+    [SerializeField] AudioClip death;
 
     [Header("SlimePower")]
     [SerializeField] SlimeColor slimeColor;
@@ -73,6 +76,7 @@ public class Enemy : MonoBehaviour
         }
         if (!spawn)
             yield return new WaitForSeconds(1);
+        AudioSource.PlayClipAtPoint(jump, transform.position);
         bodyAnimator.SetBool("jumping", true);
         shadowAnimator.SetBool("jumping", true);
         verticalVelocity = spawn ? 2f : Random.Range(verticalSpeed.x,verticalSpeed.y);
@@ -94,6 +98,7 @@ public class Enemy : MonoBehaviour
             isGrounded = true;
             bodyAnimator.SetBool("jumping", false);
             shadowAnimator.SetBool("jumping", false);
+            AudioSource.PlayClipAtPoint(jump, transform.position);
             StartCoroutine(JumpCorroutine((target.position - transform.position).normalized * directionMultiplier, false));
         }
     }
@@ -101,14 +106,16 @@ public class Enemy : MonoBehaviour
     [ContextMenu("Dividir")]
     public void Divide(Vector3 direction) {
             Destroy(gameObject);
-            GameObject leftHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            leftHalf.transform.localScale = transform.localScale - Vector3.one;
-            leftHalf.GetComponent<Enemy>().KnockBack(new Vector2(direction.x + 0.05f,direction.y));
-            leftHalf.GetComponent<Enemy>().numOfDivisions -= 1; 
-            GameObject rightHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            rightHalf.transform.localScale = transform.localScale - Vector3.one;
-            rightHalf.GetComponent<Enemy>().KnockBack(new Vector2(direction.x - 0.05f,direction.y));
-            rightHalf.GetComponent<Enemy>().numOfDivisions -= 1; 
+            GameObject leftHalf = createHalfEnemy(new Vector2(direction.x + 0.05f,direction.y));
+            GameObject rightHalf = createHalfEnemy(new Vector2(direction.x - 0.05f,direction.y));
+    }
+
+    public GameObject createHalfEnemy(Vector2 enemyKnockBackDirection){
+        GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        enemy.transform.localScale = transform.localScale - Vector3.one;
+        enemy.GetComponent<Enemy>().KnockBack(enemyKnockBackDirection);
+        enemy.GetComponent<Enemy>().numOfDivisions -= 1;
+        return enemy;
     }
 
     public void TakeDamage(Vector3 direction) {
@@ -138,6 +145,7 @@ public class Enemy : MonoBehaviour
 
     public void Die() {
         if (!invulnerable) {
+            AudioSource.PlayClipAtPoint(death, transform.position);
             StartCoroutine(DieCoroutine());
         }
     }
