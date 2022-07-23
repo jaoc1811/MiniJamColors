@@ -201,6 +201,7 @@ public class PlayerController : MonoBehaviour
         anim.Play("Harakiri");
         yield return new WaitForSeconds(1f);
         FindObjectOfType<CameraScript>().ZoomOut();
+        yield return new WaitForSeconds(1f);
         foreach (GameObject enemy in enemies)
         {
             if (enemy != null)
