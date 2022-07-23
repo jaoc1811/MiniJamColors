@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
     }
 
 private void OnCollisionEnter2D(Collision2D other) {
-        if (other.collider.CompareTag("Enemy")) {
+        if (other.collider.CompareTag("Enemy") && !isInvincible) {
             Debug.Log("TRIGGER");
             // Trigger Animation
 
