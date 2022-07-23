@@ -13,8 +13,8 @@ public class CameraScript : MonoBehaviour
     }
 
     [ContextMenu("ZoomOut")]
-    public void ZoomOutr() {
-        StartCoroutine(1f.Tweeng((p)=>transform.position=p, transform.position, new Vector3(0,0,-10)));
-        StartCoroutine(1f.Tweeng((s)=>GetComponent<Camera>().orthographicSize=s, 2f, 5f));
+    public void ZoomOut() {
+        StartCoroutine(.5f.Tweeng((p)=>transform.position=p, transform.position, new Vector3(0,0,-10)));
+        StartCoroutine(.5f.Tweeng((s)=>GetComponent<Camera>().orthographicSize=s, 2f, 5f));
     }
 }
