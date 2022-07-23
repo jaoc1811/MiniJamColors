@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     [Header ("Attack")]
     [SerializeField] Transform attackPoint;
     [SerializeField] float attackRange = 0.33f;
-    [SerializeField] float attackRadius = 0.45f;
     [SerializeField] float attackDelay = 0.25f;
     [SerializeField] LayerMask enemyLayers;
 
