@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        lives = (int)transform.localScale.x;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(JumpCorroutine((target.position - transform.position).normalized, false));
     }
@@ -93,7 +94,6 @@ public class Enemy : MonoBehaviour
     }
 
     public void TakeDamage(Vector3 direction) {
-        Debug.Log(invulnerable);
         if (!invulnerable) {
             if(lives > 1) {
                 KnockBack(direction);
@@ -113,7 +113,7 @@ public class Enemy : MonoBehaviour
     }
 
     IEnumerator damageProtection() {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         invulnerable = false;
     }
 
@@ -123,7 +123,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    
     IEnumerator DieCoroutine() {
         dead = true;
         bodyAnimator.Play("Die");
@@ -131,5 +130,4 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
-
 }
