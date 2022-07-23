@@ -1,0 +1,2314 @@
+fileFormatVersion: 2
+guid: f76d5e9141e5cee40a139358d6ec3b79
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slime_dodge_up_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 456
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ea2e3877bf5d94397f45120466f8f1
+      internalID: 369512658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 456
+        width: 22
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3524f6e8f5d43474c86a5eba827b1737
+      internalID: 1426635356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_2
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 456
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757317965cffdd740948d3867c343cf7
+      internalID: -1947092023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 456
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c423a37702b12344e8982576c612eb65
+      internalID: 1821670454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_4
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 456
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5184261a5b40e2c4e8f59072895da9e2
+      internalID: 1419260426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_5
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 456
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c82abc7aa092548a008d67a14c1e72
+      internalID: 1054948998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_6
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 456
+        width: 38
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5c86390a5d6a84e915ae1493a85bb4
+      internalID: -442388249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_7
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 456
+        width: 36
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5efa962a39b4b54d93981decbfa443a
+      internalID: 707263533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_8
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 456
+        width: 34
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c8f0af8781d7046a336651057cc08e
+      internalID: 1262274146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_9
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 456
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea0a4ec5bd970041ae25d229f198e75
+      internalID: 547456688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_10
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 456
+        width: 28
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5dbaefee8373e4499cf050e5bf703df
+      internalID: 1293066820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_11
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 456
+        width: 25
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a551c43e1f8b44f8b3d56b4d41386f
+      internalID: 663368256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_12
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 456
+        width: 22
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e1bc3be63ed7441ac47c7c883eb239
+      internalID: 1924860772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_13
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 456
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04398ee409f5a7b4688c3e062fafe036
+      internalID: -262140948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_14
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 384
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f046c45aa0aba04f8ef795cba1ca93c
+      internalID: 416861047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_15
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 384
+        width: 22
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b0e02da074a1b418410f19a36994ee
+      internalID: 861130257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_16
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 384
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21cf3a19f453ab4b88881fd905147f5
+      internalID: 708575286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_17
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 384
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b64f4515c8e4c64a8af5f36a7cb978e
+      internalID: 510805263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_18
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 384
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b9bbd5898997d45a3447917303980e
+      internalID: -1944119895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_19
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 384
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b7d57d86611dd479c6a026460f8ce0
+      internalID: 531531413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_20
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 384
+        width: 38
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58fab00850d7a6479a90e0f9f97ee7e
+      internalID: 1287457582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_21
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 384
+        width: 36
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6020a7fa1846dd40b0b89ef88bf3c55
+      internalID: 8915508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_22
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 384
+        width: 34
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66a6835b87c7b84dbd0b87d30a1d97a
+      internalID: -1942948803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_23
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 384
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a815926732a439b49b37f6242a47f147
+      internalID: -98099162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_24
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 384
+        width: 28
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1ad558b3b1c8849a6d1b41c3d62e71
+      internalID: 1853530138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_25
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 384
+        width: 25
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9746c957376cc409a97a8c1ba39b23
+      internalID: 818232570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_26
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 384
+        width: 22
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9914c66fad6df4bbbfacd8b21d3ddf
+      internalID: 897988436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_27
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 384
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d176f5b47ed8924797b51f87a70caa0
+      internalID: 221000723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_28
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 312
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7fa44541a21c642b60ab842be4f4b7
+      internalID: -1012159562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_29
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 312
+        width: 22
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c843a518c3b1d9438d7f64cadfff550
+      internalID: 748432911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_30
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 312
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc85aa2c3ae9ea47a69b264b0373378
+      internalID: 1023577059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_31
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 312
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e67b2f1dfdca374d97f68f431a20620
+      internalID: -1348947590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_32
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 312
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9598e1ce303810947b109e1092b6ccca
+      internalID: -1903317748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_33
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 312
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9a73a9ad5cbc34b8cd92280b4c8b58
+      internalID: 831687477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_34
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 312
+        width: 38
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5d6238ad8bdae4db6ab9496074c89e
+      internalID: 1242339389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_35
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 312
+        width: 36
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06c492ba70865e48a8356dfeb8ae63f
+      internalID: 1085358030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_36
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 312
+        width: 34
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecb959a269d0764e86424b4b2b6818c
+      internalID: 1546675119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_37
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 312
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249607ec21de3d6449fe3408584424a0
+      internalID: -1577266295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_38
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 312
+        width: 28
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c525fe5e233fdc43afb389bc6bee8c0
+      internalID: -501896718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_39
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 312
+        width: 25
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66e3d4aeab39d34891cf0fbc81770ce
+      internalID: -437719546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_40
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 312
+        width: 22
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a82e0ba3b46ef42a99636fcd84adb6
+      internalID: -769137139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_41
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 312
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b70de618b7780e44953a8a54efb7fe6
+      internalID: 1659278976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_42
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 240
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef0d47139138704e942b77e9cfc2702
+      internalID: 1201129699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_43
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 240
+        width: 22
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6157bcc082b7945a442fcfdd23ccac
+      internalID: -679818233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_44
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 240
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5076407f09d4240a69ec65cb1b1f56
+      internalID: 467310691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_45
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 240
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02403bd8c509c6342804b8edec71e943
+      internalID: -62073800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_46
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 240
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7348e6280f40840849deedb68b948c
+      internalID: 998389499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_47
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 240
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ea7a94139680640955bda63ceb0661
+      internalID: 1100038661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_48
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 240
+        width: 38
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c123b8fdd611d17419aabbe57427df63
+      internalID: -767103957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_49
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 240
+        width: 36
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664e4bdfa36864a478c8e420c17f17f7
+      internalID: 1660369211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_50
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 240
+        width: 34
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30205892397a52a4fbd9f350d553ab1a
+      internalID: 169968770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_51
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 240
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f519b87c1b482ed48812e2d6209c4b86
+      internalID: 948221768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_52
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 240
+        width: 28
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1200ec12cdffe73489bc2f05788d5d4c
+      internalID: 1673941990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_53
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 240
+        width: 25
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a19870a5b6737043be03e98ca748f45
+      internalID: 1543341930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_54
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 240
+        width: 22
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973c0fc61b1c2ee43848ff35b50ee252
+      internalID: 2011491072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_55
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 240
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c9d728cfb256749b1f5e9ad7b9bcf8
+      internalID: -2086050304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_56
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 168
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d327041659f274244925767386230a53
+      internalID: -726987520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_57
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 168
+        width: 22
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac850908952b38418bd1ca71d173c73
+      internalID: 1899402798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_58
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 168
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c6fe402e7cca24085acb1296d0ff9f
+      internalID: -861624879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_59
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 168
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d35a944a34327243acab7bd99ad7cf6
+      internalID: -55468191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_60
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 168
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86289ea094950244ebfd1b96fa8b38bd
+      internalID: 2012519352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_61
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 168
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e1ca8c46d630c44bf8532a061e7af9
+      internalID: -1760145081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_62
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 168
+        width: 38
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b340a4a75932a41ad533c285d5e995
+      internalID: 1878414110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_63
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 168
+        width: 36
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a973325081c5a4485299a3d2b8f6a8
+      internalID: 506021477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_64
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 168
+        width: 34
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9446e6d19bab140ad2f11a32d64c0a
+      internalID: -1369682525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_65
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 168
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb89767272868e40b6a737f2d4f9932
+      internalID: -1541133301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_66
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 168
+        width: 28
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d648de90e567b9b48b44a3c6ced69dbd
+      internalID: 1628754011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_67
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 168
+        width: 25
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703dbd45dee457f479b6c51ac3553e4c
+      internalID: 1381092777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_68
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 168
+        width: 22
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971334af81f90a04c8b3938caec839c3
+      internalID: -2021012741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_69
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 168
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6e600b83b487d488986e11a9ba8fa0
+      internalID: 913054979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_70
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 96
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cdf9d1f20e8d3040b3e7c95935d74e8
+      internalID: 1830736840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_71
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 96
+        width: 22
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea3324a8dc55b944b3b2d02ea92930a
+      internalID: -772777055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_72
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 96
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a064a984bed18f346a39604156ff9100
+      internalID: 1330892850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_73
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 96
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6d6bd05aeef1742b3b4be5adfb4185
+      internalID: 830818964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_74
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 96
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c269f0b98b164c4681c0d040043c7ad
+      internalID: -550100912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_75
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 96
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879508364c6f34c4685f6b27b0445da2
+      internalID: 1794621097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_76
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 96
+        width: 38
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53a7b1adc6f2004e81a7773369122e8
+      internalID: -1674986613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_77
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 96
+        width: 36
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba28df529de6134aa5887680afbd9ac
+      internalID: 1094902090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_78
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 96
+        width: 34
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10afae5e732b9947be9b59cc3998248
+      internalID: -1274516769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_79
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 96
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464e270b877a469449f9c2c78e9708a2
+      internalID: 1686457888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_80
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 96
+        width: 28
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2422d02973eba4344821d66154af8901
+      internalID: -1406072340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_81
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 96
+        width: 25
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bac6365713653479436335b03843cc
+      internalID: 950294598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_82
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 96
+        width: 22
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebecde468f70a942bfac54c9ed8aa03
+      internalID: -1765541783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_83
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 96
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21aeec25b841f4d49b7b9f957f67ea56
+      internalID: -1720810957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_84
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc11c0fc360d12a4e81050a4c0a751e8
+      internalID: -1797831782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_85
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 24
+        width: 22
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60abe03c2c02344f88159fa59864f23
+      internalID: -1501114787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_86
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 24
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511a9f180cc02414f85d811d69cd997f
+      internalID: -307563908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_87
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 24
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a192795b93b9e4094992eb99afe89e
+      internalID: 1427838130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_88
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 24
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765ee8da9a4ca744b97e3d9ef5fc9fd7
+      internalID: -1917650846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_89
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 24
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e10b839eae75da48b8f3bbcd95b3f88
+      internalID: 656746949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_90
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 24
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc643d29e9689842b11e2c6a2846698
+      internalID: -702726817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_91
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 24
+        width: 42
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc2c496f94c62244abdc47430a70884
+      internalID: 1472385356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_92
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 24
+        width: 39
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007239119f646ce40b93f2ef16412c57
+      internalID: -447105680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_93
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 24
+        width: 33
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f89e4cf7edd8dd43813b53f18fbc92c
+      internalID: -1825181995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_94
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 24
+        width: 27
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80df7d1b3b5f154a9fd4d36605f708b
+      internalID: 1927962769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_95
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 24
+        width: 22
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fa3d17630b20d4fb3e4b9547ef6d74
+      internalID: -1619072597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_96
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 24
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1731fd0d9be6bf42b5c9ee8946fd616
+      internalID: -2043350720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_dodge_up_97
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 24
+        width: 19
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0603b2e76a233354fbcec3bb3c4d070a
+      internalID: 622103870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      slime_dodge_up_61: -1760145081
+      slime_dodge_up_21: 8915508
+      slime_dodge_up_45: -62073800
+      slime_dodge_up_9: 547456688
+      slime_dodge_up_37: -1577266295
+      slime_dodge_up_71: -772777055
+      slime_dodge_up_52: 1673941990
+      slime_dodge_up_54: 2011491072
+      slime_dodge_up_67: 1381092777
+      slime_dodge_up_76: -1674986613
+      slime_dodge_up_32: -1903317748
+      slime_dodge_up_66: 1628754011
+      slime_dodge_up_70: 1830736840
+      slime_dodge_up_39: -437719546
+      slime_dodge_up_79: 1686457888
+      slime_dodge_up_53: 1543341930
+      slime_dodge_up_90: -702726817
+      slime_dodge_up_36: 1546675119
+      slime_dodge_up_4: 1419260426
+      slime_dodge_up_73: 830818964
+      slime_dodge_up_30: 1023577059
+      slime_dodge_up_60: 2012519352
+      slime_dodge_up_72: 1330892850
+      slime_dodge_up_97: 622103870
+      slime_dodge_up_78: -1274516769
+      slime_dodge_up_94: 1927962769
+      slime_dodge_up_81: 950294598
+      slime_dodge_up_14: 416861047
+      slime_dodge_up_19: 531531413
+      slime_dodge_up_1: 1426635356
+      slime_dodge_up_40: -769137139
+      slime_dodge_up_92: -447105680
+      slime_dodge_up_86: -307563908
+      slime_dodge_up_41: 1659278976
+      slime_dodge_up_51: 948221768
+      slime_dodge_up_38: -501896718
+      slime_dodge_up_31: -1348947590
+      slime_dodge_up_82: -1765541783
+      slime_dodge_up_25: 818232570
+      slime_dodge_up_2: -1947092023
+      slime_dodge_up_96: -2043350720
+      slime_dodge_up_93: -1825181995
+      slime_dodge_up_62: 1878414110
+      slime_dodge_up_89: 656746949
+      slime_dodge_up_26: 897988436
+      slime_dodge_up_5: 1054948998
+      slime_dodge_up_85: -1501114787
+      slime_dodge_up_7: 707263533
+      slime_dodge_up_15: 861130257
+      slime_dodge_up_87: 1427838130
+      slime_dodge_up_28: -1012159562
+      slime_dodge_up_22: -1942948803
+      slime_dodge_up_83: -1720810957
+      slime_dodge_up_80: -1406072340
+      slime_dodge_up_77: 1094902090
+      slime_dodge_up_42: 1201129699
+      slime_dodge_up_91: 1472385356
+      slime_dodge_up_56: -726987520
+      slime_dodge_up_48: -767103957
+      slime_dodge_up_34: 1242339389
+      slime_dodge_up_50: 169968770
+      slime_dodge_up_6: -442388249
+      slime_dodge_up_44: 467310691
+      slime_dodge_up_84: -1797831782
+      slime_dodge_up_35: 1085358030
+      slime_dodge_up_23: -98099162
+      slime_dodge_up_74: -550100912
+      slime_dodge_up_63: 506021477
+      slime_dodge_up_33: 831687477
+      slime_dodge_up_17: 510805263
+      slime_dodge_up_24: 1853530138
+      slime_dodge_up_64: -1369682525
+      slime_dodge_up_3: 1821670454
+      slime_dodge_up_29: 748432911
+      slime_dodge_up_69: 913054979
+      slime_dodge_up_49: 1660369211
+      slime_dodge_up_18: -1944119895
+      slime_dodge_up_59: -55468191
+      slime_dodge_up_88: -1917650846
+      slime_dodge_up_20: 1287457582
+      slime_dodge_up_68: -2021012741
+      slime_dodge_up_47: 1100038661
+      slime_dodge_up_57: 1899402798
+      slime_dodge_up_43: -679818233
+      slime_dodge_up_55: -2086050304
+      slime_dodge_up_12: 1924860772
+      slime_dodge_up_46: 998389499
+      slime_dodge_up_10: 1293066820
+      slime_dodge_up_8: 1262274146
+      slime_dodge_up_13: -262140948
+      slime_dodge_up_65: -1541133301
+      slime_dodge_up_95: -1619072597
+      slime_dodge_up_11: 663368256
+      slime_dodge_up_16: 708575286
+      slime_dodge_up_0: 369512658
+      slime_dodge_up_75: 1794621097
+      slime_dodge_up_58: -861624879
+      slime_dodge_up_27: 221000723
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

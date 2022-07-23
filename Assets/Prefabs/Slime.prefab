@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3015334210643530863}
   - component: {fileID: 3015334210643530862}
-  m_Layer: 0
+  - component: {fileID: 3015334211025732305}
+  m_Layer: 6
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,13 +53,29 @@ MonoBehaviour:
   transShadow: {fileID: 3015334210938193795}
   groundVelocity: {x: 0, y: 0}
   verticalVelocity: 3
-  verticalSpeed: 3
-  speed: 4
+  verticalSpeed: {x: 3, y: 5}
+  speed: {x: 6, y: 9}
   gravity: -10
   bodySprite: {fileID: 3015334211184057231}
   shadowSprite: {fileID: 3015334210938193793}
   enemyPrefab: {fileID: 3015334210643530832}
   isGrounded: 1
+--- !u!58 &3015334211025732305
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015334210643530832}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.234375}
+  serializedVersion: 2
+  m_Radius: 0.296875
 --- !u!1 &3015334210938193796
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +87,7 @@ GameObject:
   - component: {fileID: 3015334210938193795}
   - component: {fileID: 3015334210938193793}
   - component: {fileID: 3015334210938193794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +192,7 @@ GameObject:
   - component: {fileID: 3015334211184057230}
   - component: {fileID: 3015334211184057231}
   - component: {fileID: 3015334211184057328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

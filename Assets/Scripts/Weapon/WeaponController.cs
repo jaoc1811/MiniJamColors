@@ -28,5 +28,4 @@ public class WeaponController : MonoBehaviour
     public bool isAttacking() {
         return attacking;
     }
-
 }
