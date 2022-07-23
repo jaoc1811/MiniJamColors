@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3015334210643530832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.48, y: -0.5, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3015334211184057230}
@@ -61,6 +61,7 @@ MonoBehaviour:
   shadowSprite: {fileID: 3015334210938193793}
   enemyPrefab: {fileID: 3015334210643530832}
   isGrounded: 1
+  numOfDivisions: 4
 --- !u!58 &3015334211025732305
 CircleCollider2D:
   m_ObjectHideFlags: 0
