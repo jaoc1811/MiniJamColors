@@ -53,6 +53,24 @@ public class Enemy : MonoBehaviour
         StartCoroutine(JumpCorroutine((target.position - transform.position).normalized * directionMultiplier, false));
     }
 
+    [ContextMenu("Stop")]
+    void stop() {
+        GetComponent<Enemy>().enabled = false;
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<Animator>().enabled = false;
+        }
+    }
+
+    [ContextMenu("Play")]
+    void play() {
+        GetComponent<Enemy>().enabled = true;
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<Animator>().enabled = true;
+        }
+    }
+
     private void Awake() {
         GetComponent<Enemy>().enabled = true;
         transBody.GetComponent<Animator>().enabled = true;
