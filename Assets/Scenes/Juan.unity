@@ -1536,7 +1536,7 @@ MonoBehaviour:
     m_Bits: 64
   attackSound: {fileID: 8300000, guid: aa40aaf6e6525e84db2ae3d8dad99415, type: 3}
   mergeSound: {fileID: 8300000, guid: 9d699ecb75d031b4bb4bc3c2f06a3773, type: 3}
-  dodgeSound: {fileID: 8300000, guid: ee32ca05ce5c62b4f9e27ecb4cae5fd7, type: 3}
+  dodgeSound: {fileID: 8300000, guid: 0e7a5a466f6cf244dab5a568a70a92c5, type: 3}
 --- !u!50 &821498496
 Rigidbody2D:
   serializedVersion: 4
