@@ -189,6 +189,14 @@ public class PlayerController : MonoBehaviour
         // TODO: poner la barra en 0 en el UI
     }
 
+    void SwordSound() {
+        AudioSource.PlayClipAtPoint(attackSound, transform.position);
+    }
+
+    void MergeSound() {
+        AudioSource.PlayClipAtPoint(mergeSound, transform.position);
+    }
+
     IEnumerator HarakiriCoroutine() {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
@@ -207,7 +215,6 @@ public class PlayerController : MonoBehaviour
             if (enemy != null)
                 enemy.GetComponent<Enemy>().Play();
         }
-
     }
 
     void EndHarakiri(){
