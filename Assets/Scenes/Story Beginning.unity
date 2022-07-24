@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storySequence: []
   BlackScreen: {fileID: 1881173195}
+  nextScene: Game
 --- !u!1 &107070291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,6 +1887,7 @@ MonoBehaviour:
   - {fileID: 107070291}
   - {fileID: 1001478263}
   BlackScreen: {fileID: 1881173195}
+  nextScene: Game
 --- !u!1 &757572675
 GameObject:
   m_ObjectHideFlags: 0
