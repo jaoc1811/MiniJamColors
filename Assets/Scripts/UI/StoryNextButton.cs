@@ -9,6 +9,8 @@ using TMPro;
 public class StoryNextButton : MonoBehaviour
 {
     [SerializeField] GameObject[] storySequence;
+    [SerializeField] GameObject[] tutorialControls;
+    [SerializeField] GameObject[] bombWarnings;
     [SerializeField] GameObject BlackScreen;
     [SerializeField] string nextScene;
 
@@ -30,6 +32,19 @@ public class StoryNextButton : MonoBehaviour
             storySequence[currentScene].SetActive(false);
             currentScene++;
             storySequence[currentScene].SetActive(true);
+        }
+    }
+
+    public void ChangeSceneTutorial(){
+        if (bombWarnings[0].activeInHierarchy){
+            DirectLoadScene();
+            return;
+        }
+        foreach(GameObject go in tutorialControls){
+            go.SetActive(false);
+        }
+        foreach(GameObject go in bombWarnings){
+            go.SetActive(true);
         }
     }
 
