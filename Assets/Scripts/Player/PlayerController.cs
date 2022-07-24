@@ -231,7 +231,7 @@ public class PlayerController : MonoBehaviour
         float offsetDirection = attackPoint.localPosition.x > 0 ? 1 : -1;
         enemy.GetComponent<Enemy>().spawnHalfEnemy(enemy, transform.localScale, new Vector2(attackPoint.localPosition.x+offsetDirection, attackPoint.localPosition.y));
         // Change player scale
-        currentScale -= Vector3.one; 
+        currentScale = Vector3Int.RoundToInt(currentScale / 2); 
         transform.localScale = currentScale;
         harakiri = false;
         StartCoroutine(StopInvincibleCoroutine());
