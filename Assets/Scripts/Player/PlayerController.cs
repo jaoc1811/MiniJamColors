@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnFire() {
-        if (harakiri || dead) return;
+        if (harakiri || dead || PauseMenu.GameIsPaused) return;
         if (canAttack) {
             attack();
         }
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnDodge() {
-        if ((!isDodging) && !harakiri && !dead){
+        if ((!isDodging) && !harakiri && !dead && !PauseMenu.GameIsPaused){
             isDodging = true;
             canAttack = false;
             anim.SetBool("Dodge", true);
