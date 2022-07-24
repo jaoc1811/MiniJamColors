@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
             isDodging = true;
             canAttack = false;
             anim.SetBool("Dodge", true);
+            bomb.GetComponent<SpriteRenderer>().enabled = false;
             AudioSource.PlayClipAtPoint(dodgeSound, transform.position);
             speed *= 2;
             StartCoroutine(DodgeRecharge());
@@ -147,6 +148,7 @@ public class PlayerController : MonoBehaviour
 
     void StopDodge(){
         speed = initialSpeed;
+        bomb.GetComponent<SpriteRenderer>().enabled = true;
         canAttack = true;
         anim.SetBool("Dodge", false);
     }
