@@ -15,17 +15,15 @@ public class GameManager : MonoBehaviour
     public int timer;
     [SerializeField] TMP_Text timerText;
 
-    [Header("Harakiri")]
+    [Header("UI")]
     [SerializeField] RectTransform harakiriProgress;
-
-    [Header("Attack")]
     [SerializeField] Image attackUI;
-
-    [Header("Dodge")]
     [SerializeField] Image DodgeUI;
+    [SerializeField] GameObject gameOverScreen;
 
-    [Header("LoadEnding")]
+    [Header("Scenes")]
     [SerializeField] string EndingSceneName;
+    [SerializeField] string GameSceneName;
     
 
     private void Awake() {
@@ -79,6 +77,16 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(EndingSceneName);
     }
 
+    public void LoadGame() {
+        StartCoroutine(LoadGameCoroutine());
+    }
+
+    IEnumerator LoadGameCoroutine() {
+        yield return new WaitForSeconds(0.1f);
+        SceneManager.LoadScene(GameSceneName);
+
+    }
+
     IEnumerator CountdownRoutine() {
         while (timer > 0) {
             UpdateUITime();
@@ -92,5 +100,9 @@ public class GameManager : MonoBehaviour
         }
 
         player.GetComponent<PlayerController>().Die();
+    }
+
+    public void GameOverScreen() {
+        gameOverScreen.SetActive(true);
     }
 }
