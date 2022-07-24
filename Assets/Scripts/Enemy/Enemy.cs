@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
     void UpdatePosition() {
         if (!isGrounded && !dead){
             Vector3 newPosition = transform.position + (Vector3)groundVelocity * Time.deltaTime;
-            transform.position = new Vector3(Mathf.Clamp(newPosition.x,-8.9f,8.9f), Mathf.Clamp(newPosition.y, -4.9f, 4.4f), 0);
+            transform.position = new Vector3(Mathf.Clamp(newPosition.x,-8.5f,8.5f), Mathf.Clamp(newPosition.y, -4.4f, 4), 0);
             verticalVelocity += gravity * Time.deltaTime;
             transBody.position += new Vector3(0,verticalVelocity,0) * Time.deltaTime;
         }

@@ -557,12 +557,14 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: aa40aaf6e6525e84db2ae3d8dad99415, type: 3}
   mergeSound: {fileID: 8300000, guid: 9d699ecb75d031b4bb4bc3c2f06a3773, type: 3}
   dodgeSound: {fileID: 8300000, guid: 0e7a5a466f6cf244dab5a568a70a92c5, type: 3}
+  harakiriSound: {fileID: 8300000, guid: f205fff2455bffe42a3b82b312133788, type: 3}
   harakiri: 0
   enemiesKilled: 0
   harakiriMax: 5
   invincible: 0
   invincibleDelay: 1
   invertShader: {fileID: 179719090}
+  bomb: {fileID: 1432278850}
 --- !u!50 &821498496
 Rigidbody2D:
   serializedVersion: 4
@@ -806,8 +808,8 @@ Tilemap:
   - first: {x: -9, y: -5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 12
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2605,8 +2607,8 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 95d1bfbc4994eec4797d88341b2c19bc, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 78b013ee65540d24f84f2008042c7bed, type: 2}
   - m_RefCount: 1
@@ -2629,11 +2631,11 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fba503b1c6110df41a140a9befec7c7d, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: 36f64f1f1dd9d0b40bddb9b258b7e8d3, type: 2}
-  - m_RefCount: 96
+  - m_RefCount: 97
     m_Data: {fileID: 11400000, guid: 71a7197514e488a429877f544b087481, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -1451892219, guid: fc266834c85f4f043a482ad8fa5ae962, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1006234349, guid: fc266834c85f4f043a482ad8fa5ae962, type: 3}
   - m_RefCount: 1
@@ -2656,7 +2658,7 @@ Tilemap:
     m_Data: {fileID: -1361977593, guid: fc266834c85f4f043a482ad8fa5ae962, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: -5169338, guid: fc266834c85f4f043a482ad8fa5ae962, type: 3}
-  - m_RefCount: 96
+  - m_RefCount: 97
     m_Data: {fileID: 945894673, guid: fc266834c85f4f043a482ad8fa5ae962, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 180

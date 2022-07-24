@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip attackSound;
     [SerializeField] AudioClip mergeSound;
     [SerializeField] AudioClip dodgeSound;
+    [SerializeField] AudioClip harakiriSound;
 
     [Header("Harakiri")]
     [SerializeField] bool harakiri;
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool invincible;
     [SerializeField] float invincibleDelay = 1f;
     [SerializeField] GameObject invertShader;
+    [SerializeField] GameObject bomb;
 
     // [Header ("Animation")]
     Animator anim;
@@ -168,7 +170,11 @@ public class PlayerController : MonoBehaviour
                 Vector3 originalScale = transform.localScale;
                 float counter = 0;
                 while (counter < scaleDuration) {
+                    float localOrg = transform.localScale.x;
                     transform.localScale = Vector3.Lerp(originalScale, currentScale, counter/scaleDuration);
+                    float scale = localOrg / transform.localScale.x;
+                    float bombOrg = bomb.transform.localScale.x;
+                    bomb.transform.localScale = new Vector3(bombOrg*scale, bombOrg*scale, bombOrg*scale);
                     counter += Time.deltaTime;
                     yield return null;
                 }
@@ -194,8 +200,8 @@ public class PlayerController : MonoBehaviour
         AudioSource.PlayClipAtPoint(attackSound, transform.position);
     }
 
-    void MergeSound() {
-        AudioSource.PlayClipAtPoint(mergeSound, transform.position);
+    void HarakiriSound() {
+        AudioSource.PlayClipAtPoint(harakiriSound, transform.position);
     }
 
     void EnableInvert() {
@@ -231,10 +237,17 @@ public class PlayerController : MonoBehaviour
         float offsetDirection = attackPoint.localPosition.x > 0 ? 1 : -1;
         enemy.GetComponent<Enemy>().spawnHalfEnemy(enemy, transform.localScale, new Vector2(attackPoint.localPosition.x+offsetDirection, attackPoint.localPosition.y));
         // Change player scale
-        currentScale = Vector3Int.RoundToInt(currentScale / 2); 
-        transform.localScale = currentScale;
+        ResizePlayer();
         harakiri = false;
         StartCoroutine(StopInvincibleCoroutine());
+    }
+
+    void ResizePlayer() { 
+        currentScale = Vector3Int.RoundToInt(currentScale / 2);
+        float scale = transform.localScale.x / currentScale.x;
+        float bombOrg = bomb.transform.localScale.x;
+        transform.localScale = currentScale; 
+        bomb.transform.localScale = new Vector3(bombOrg*scale, bombOrg*scale, bombOrg*scale);
     }
 
     IEnumerator StopInvincibleCoroutine(){
