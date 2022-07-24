@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] bool isGrounded = true;
     [SerializeField] int lives;
-    public int numOfDivisions = 2;
     bool invulnerable = false;
     bool dead = false;
     Rigidbody2D rb;
@@ -51,7 +50,6 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         lives = (int)transform.localScale.x;
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        numOfDivisions = (int)transform.localScale.x - 1;
         speed = new Vector2(6,9);
 
         slimeColor = (SlimeColor)Random.Range(0, ((int)SlimeColor.COUNT));
@@ -113,7 +111,7 @@ public class Enemy : MonoBehaviour
     void UpdatePosition() {
         if (!isGrounded && !dead){
             Vector3 newPosition = transform.position + (Vector3)groundVelocity * Time.deltaTime;
-            transform.position = new Vector3(Mathf.Clamp(newPosition.x,-8.9f,8.9f), Mathf.Clamp(newPosition.y, -4.9f, 4.4f), 0);
+            transform.position = new Vector3(Mathf.Clamp(newPosition.x,-8.5f,8.5f), Mathf.Clamp(newPosition.y, -4.4f, 4), 0);
             verticalVelocity += gravity * Time.deltaTime;
             transBody.position += new Vector3(0,verticalVelocity,0) * Time.deltaTime;
         }
@@ -143,10 +141,8 @@ public class Enemy : MonoBehaviour
     }
 
     public void spawnHalfEnemy(GameObject enemy, Vector3 scale, Vector2 enemyKnockBackDirection){
-        enemy.transform.localScale = scale - Vector3.one;
+        enemy.transform.localScale = Vector3Int.RoundToInt(scale / 2);
         enemy.GetComponent<Enemy>().KnockBack(enemyKnockBackDirection);
-        // enemy.GetComponent<Enemy>().numOfDivisions -= 1;
-        enemy.GetComponent<Enemy>().numOfDivisions = (int)scale.x - 1;
     }
 
     public void TakeDamage(Vector3 direction) {
@@ -177,6 +173,7 @@ public class Enemy : MonoBehaviour
     public void Die() {
         if (!invulnerable) {
             AudioSource.PlayClipAtPoint(death, transform.position);
+            GetComponent<CircleCollider2D>().enabled = false;
             StartCoroutine(DieCoroutine());
         }
     }
