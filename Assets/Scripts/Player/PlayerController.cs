@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour
     private void Update() {
         if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || EnemiesKilled >= harakiriMax) && transform.localScale.x > 1 && !harakiri){
             Harakiri();
+        } else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && transform.localScale.x == 1) {
+            StartCoroutine(WinCoroutine());
         }
     }
 
@@ -208,8 +210,13 @@ public class PlayerController : MonoBehaviour
         invincible = true;
         EnemiesKilled = 0;
         StartCoroutine(HarakiriCoroutine());
-        // TODO: acercar la camara, parar todo
         // TODO: poner la barra en 0 en el UI
+    }
+
+    IEnumerator WinCoroutine() {
+        FindObjectOfType<CameraScript>().ZoomToPlayer();
+        yield return new WaitForSeconds(1f);
+        // GameManager.Instance.LoadEnding();
     }
 
     void SwordSound() {
@@ -305,7 +312,7 @@ public class PlayerController : MonoBehaviour
     void activateDeadSlime() {
         deadSlime.SetActive(true);
     }
-    
+
     void EndDie() {
         GetComponent<SpriteRenderer>().enabled = false;
     }
