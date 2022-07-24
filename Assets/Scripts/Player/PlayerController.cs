@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip explosionSound;
 
     [Header("Harakiri")]
-    [SerializeField] bool harakiri;
+    public bool harakiri;
     private int enemiesKilled = 0;
     public int EnemiesKilled {
         get => enemiesKilled;
@@ -226,13 +226,12 @@ public class PlayerController : MonoBehaviour
         harakiri = true;
         invincible = true;
         StartCoroutine(HarakiriCoroutine());
-        // TODO: poner la barra en 0 en el UI
     }
 
     IEnumerator WinCoroutine() {
         FindObjectOfType<CameraScript>().ZoomToPlayer();
         yield return new WaitForSeconds(1f);
-        // GameManager.Instance.LoadEnding();
+        GameManager.instance.LoadEnding();
     }
 
     void SwordSound() {

@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public bool gameOver;
     Transform player;
 
     [Header("Bomb Timer")]
@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Dodge")]
     [SerializeField] Image DodgeUI;
+
+    [Header("LoadEnding")]
+    [SerializeField] string EndingSceneName;
     
 
     private void Awake() {
@@ -72,14 +75,22 @@ public class GameManager : MonoBehaviour
         timerText.text = t.ToString(@"mm\:ss");
     }
 
+    public void LoadEnding() {
+        SceneManager.LoadScene(EndingSceneName);
+    }
+
     IEnumerator CountdownRoutine() {
         while (timer > 0) {
             UpdateUITime();
             yield return new WaitForSeconds(1);
             timer--;
         }
+        UpdateUITime();
 
-        gameOver = true;
-        //UIManager.Instance.showGameOverScreen();
+        while(player.GetComponent<PlayerController>().harakiri) {
+            yield return new WaitForEndOfFrame();
+        }
+
+        player.GetComponent<PlayerController>().Die();
     }
 }
