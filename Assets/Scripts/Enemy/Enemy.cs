@@ -52,6 +52,7 @@ public class Enemy : MonoBehaviour
         lives = (int)transform.localScale.x;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         numOfDivisions = (int)transform.localScale.x - 1;
+        speed = new Vector2(6,9);
 
         slimeColor = (SlimeColor)Random.Range(0, ((int)SlimeColor.COUNT));
         transBody.GetComponent<SpriteRenderer>().color = colors[(int)slimeColor];
@@ -201,7 +202,7 @@ public class Enemy : MonoBehaviour
                 velocityMultiplier = 1.5f;
                 break;
             case SlimeColor.Green:
-                directionMultiplier = 0;
+                velocityMultiplier = 0.001f;
                 break;
             case SlimeColor.Magenta:
                 jumpDelay = 0.5f;
