@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
     }
 
     IEnumerator attackRecharge() {
-        yield return new WaitForSeconds(attackDelay);
+        yield return new WaitForSeconds(attackDelay * transform.localScale.x);
         if (!isDodging){ // To prevent attacks when dodging
             canAttack = true;
         }
