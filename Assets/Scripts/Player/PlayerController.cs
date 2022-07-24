@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int harakiriMax = 5;
     [SerializeField] bool invincible;
     [SerializeField] float invincibleDelay = 1f;
+    [SerializeField] GameObject invertShader;
 
     // [Header ("Animation")]
     Animator anim;
@@ -197,6 +198,13 @@ public class PlayerController : MonoBehaviour
         AudioSource.PlayClipAtPoint(mergeSound, transform.position);
     }
 
+    void EnableInvert() {
+        invertShader.SetActive(true);
+    }
+
+    void DisableInvert() {
+        invertShader.SetActive(false);
+    }
     IEnumerator HarakiriCoroutine() {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
