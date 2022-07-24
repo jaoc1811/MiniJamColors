@@ -10,6 +10,13 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Vector2 movementVector;
     bool canAttack = true;
+    public bool CanAttack {
+        get => canAttack;
+        set {
+            canAttack = value;
+            GameManager.instance.UpdateUIAttack(value);
+        }
+    }
 
     [Header("Scale")]
     [SerializeField] Vector3 currentScale;
@@ -18,6 +25,14 @@ public class PlayerController : MonoBehaviour
 
     [Header("States")]
     [SerializeField] bool isDodging;
+    bool canDodge = true;
+    public bool CanDodge {
+        get => canDodge;
+        set {
+            canDodge = value;
+            GameManager.instance.UpdateUIDodge(value);
+        }
+    }
     [SerializeField] bool invincible;
     [SerializeField] bool dead;
 
@@ -42,9 +57,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip explosionSound;
 
     [Header("Harakiri")]
-    [SerializeField] bool harakiri;
-    public int enemiesKilled = 0;
-    [SerializeField] int harakiriMax = 5;
+    public bool harakiri;
+    private int enemiesKilled = 0;
+    public int EnemiesKilled {
+        get => enemiesKilled;
+        set {
+            enemiesKilled = value;
+            GameManager.instance.UpdateUIHarakiri(value);
+        }
+    }
+    public int harakiriMax = 5;
     [SerializeField] float invincibleDelay = 1f;
 
     [Header("Objects")]
@@ -65,8 +87,10 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
-        if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || enemiesKilled >= harakiriMax) && transform.localScale.x > 1 && !harakiri){
+        if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || EnemiesKilled >= harakiriMax) && transform.localScale.x > 1 && !harakiri){
             Harakiri();
+        } else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && transform.localScale.x == 1) {
+            StartCoroutine(WinCoroutine());
         }
     }
 
@@ -107,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnFire() {
         if (harakiri || dead || PauseMenu.GameIsPaused) return;
-        if (canAttack) {
+        if (CanAttack) {
             attack();
         }
     }
@@ -116,7 +140,7 @@ public class PlayerController : MonoBehaviour
         // Play animation
         attackPoint.GetComponent<WeaponController>().Enable();
         AudioSource.PlayClipAtPoint(attackSound, transform.position);
-        canAttack = false;
+        CanAttack = false;
         StartCoroutine(attackRecharge());
     }
 
@@ -131,15 +155,16 @@ public class PlayerController : MonoBehaviour
     IEnumerator attackRecharge() {
         yield return new WaitForSeconds(attackDelay * transform.localScale.x);
         if (!isDodging){ // To prevent attacks when dodging
-            canAttack = true;
+            CanAttack = true;
         }
         
     }
 
     private void OnDodge() {
-        if ((!isDodging) && !harakiri && !dead && !PauseMenu.GameIsPaused){
+        if (CanDodge && !harakiri && !dead && !PauseMenu.GameIsPaused){
             isDodging = true;
-            canAttack = false;
+            CanDodge = false;
+            CanAttack = false;
             anim.SetBool("Dodge", true);
             bomb.GetComponent<SpriteRenderer>().enabled = false;
             AudioSource.PlayClipAtPoint(dodgeSound, transform.position);
@@ -150,13 +175,14 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator DodgeRecharge() {
         yield return new WaitForSeconds(dodgeDelay);
-        isDodging = false;
+        CanDodge = true;
     }
 
     void StopDodge(){
         speed = initialSpeed;
         bomb.GetComponent<SpriteRenderer>().enabled = true;
-        canAttack = true;
+        CanAttack = true;
+        isDodging = false;
         anim.SetBool("Dodge", false);
     }
 
@@ -195,14 +221,17 @@ public class PlayerController : MonoBehaviour
 
     [ContextMenu("Harakiri")]
     void Harakiri(){
-        if (transform.localScale.x <= 1) return;
+        if (transform.localScale.x <= 1 || harakiri) return;
         rb.velocity = new Vector2(0,0);
         harakiri = true;
         invincible = true;
-        enemiesKilled = 0;
         StartCoroutine(HarakiriCoroutine());
-        // TODO: acercar la camara, parar todo
-        // TODO: poner la barra en 0 en el UI
+    }
+
+    IEnumerator WinCoroutine() {
+        FindObjectOfType<CameraScript>().ZoomToPlayer();
+        yield return new WaitForSeconds(1f);
+        GameManager.instance.LoadEnding();
     }
 
     void SwordSound() {
@@ -247,6 +276,7 @@ public class PlayerController : MonoBehaviour
         enemy.GetComponent<Enemy>().spawnHalfEnemy(enemy, transform.localScale, new Vector2(attackPoint.localPosition.x+offsetDirection, attackPoint.localPosition.y));
         // Change player scale
         ResizePlayer();
+        EnemiesKilled = 0;
         harakiri = false;
         StartCoroutine(StopInvincibleCoroutine());
     }
@@ -298,7 +328,7 @@ public class PlayerController : MonoBehaviour
     void activateDeadSlime() {
         deadSlime.SetActive(true);
     }
-    
+
     void EndDie() {
         GetComponent<SpriteRenderer>().enabled = false;
     }
