@@ -284,8 +284,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storySequence: []
+  tutorialControls: []
+  bombWarnings: []
   BlackScreen: {fileID: 1881173195}
-  nextScene: Game
+  nextScene: Tutorial
 --- !u!82 &27778710
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2105,8 +2107,10 @@ MonoBehaviour:
   - {fileID: 402053851}
   - {fileID: 107070291}
   - {fileID: 1001478263}
+  tutorialControls: []
+  bombWarnings: []
   BlackScreen: {fileID: 1881173195}
-  nextScene: Game
+  nextScene: Tutorial
 --- !u!82 &711866792
 AudioSource:
   m_ObjectHideFlags: 0
