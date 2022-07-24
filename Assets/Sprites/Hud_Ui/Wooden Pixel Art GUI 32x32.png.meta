@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,6 +114,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -16325,21 +16337,21 @@ TextureImporter:
       Wooden Pixel Art GUI 32x32_39: -1505936418
       Wooden Pixel Art GUI 32x32_489: -1567327969
       Wooden Pixel Art GUI 32x32_11: -2110439215
-      Wooden Pixel Art GUI 32x32_46: -808197039
       Wooden Pixel Art GUI 32x32_511: -1807365174
+      Wooden Pixel Art GUI 32x32_55: -1565954268
       Wooden Pixel Art GUI 32x32_264: -865292471
       Wooden Pixel Art GUI 32x32_350: 537323968
-      Wooden Pixel Art GUI 32x32_55: -1565954268
       Wooden Pixel Art GUI 32x32_174: 1164852149
       Wooden Pixel Art GUI 32x32_190: 954150131
       Wooden Pixel Art GUI 32x32_380: 1052100903
-      Wooden Pixel Art GUI 32x32_245: 1964510950
+      Wooden Pixel Art GUI 32x32_46: -808197039
       Wooden Pixel Art GUI 32x32_20: 536515867
       Wooden Pixel Art GUI 32x32_649: -1323031876
       Wooden Pixel Art GUI 32x32_98: -1614358315
-      Wooden Pixel Art GUI 32x32_291: -331139051
+      Wooden Pixel Art GUI 32x32_245: 1964510950
       Wooden Pixel Art GUI 32x32_376: -1160939820
       Wooden Pixel Art GUI 32x32_651: 1026728098
+      Wooden Pixel Art GUI 32x32_291: -331139051
       Wooden Pixel Art GUI 32x32_127: -2067618323
       Wooden Pixel Art GUI 32x32_42: 423229020
       Wooden Pixel Art GUI 32x32_130: 1609161720
