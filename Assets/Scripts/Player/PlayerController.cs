@@ -11,15 +11,20 @@ public class PlayerController : MonoBehaviour
     Vector2 movementVector;
     bool canAttack = true;
 
+    [Header("Scale")]
     [SerializeField] Vector3 currentScale;
     [SerializeField] Vector3 maxScale;
     [SerializeField] float scaleDuration;
+
+    [Header("States")]
+    [SerializeField] bool isDodging;
+    [SerializeField] bool invincible;
+    [SerializeField] bool dead;
 
     [Header ("Movement")]
     [SerializeField] float speed = 2f;
     float initialSpeed;
     SpriteRenderer bodySprite;
-    [SerializeField] bool isDodging;
     [SerializeField] float dodgeDelay = 1f;
 
     [Header ("Attack")]
@@ -34,17 +39,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip mergeSound;
     [SerializeField] AudioClip dodgeSound;
     [SerializeField] AudioClip harakiriSound;
+    [SerializeField] AudioClip explosionSound;
 
     [Header("Harakiri")]
     [SerializeField] bool harakiri;
     public int enemiesKilled = 0;
     [SerializeField] int harakiriMax = 5;
-    [SerializeField] bool invincible;
     [SerializeField] float invincibleDelay = 1f;
+
+    [Header("Objects")]
     [SerializeField] GameObject invertShader;
     [SerializeField] GameObject bomb;
+    [SerializeField] GameObject deadSlime;
 
-    // [Header ("Animation")]
     Animator anim;
 
     private void Start() {
@@ -92,14 +99,14 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnMove(InputValue movementValue) {
-        if (harakiri) return;
+        if (harakiri || dead) return;
         // Player Move
         movementVector = movementValue.Get<Vector2>();
         anim.SetFloat("Vertical", movementVector.y);
     }
 
     private void OnFire() {
-        if (harakiri) return;
+        if (harakiri || dead) return;
         if (canAttack) {
             attack();
         }
@@ -130,7 +137,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnDodge() {
-        if ((!isDodging) && !harakiri){
+        if ((!isDodging) && !harakiri && !dead){
             isDodging = true;
             canAttack = false;
             anim.SetBool("Dodge", true);
@@ -154,7 +161,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.collider.CompareTag("Enemy") && !isDodging && !harakiri && !invincible) {
+        if (other.collider.CompareTag("Enemy") && !isDodging && !harakiri && !invincible && !dead) {
             // Trigger Animation
             anim.Play("Hit");
             // Merge
@@ -255,5 +262,44 @@ public class PlayerController : MonoBehaviour
     IEnumerator StopInvincibleCoroutine(){
         yield return new WaitForSeconds(invincibleDelay);
         invincible = false;
+    }
+
+    [ContextMenu("Die")]
+    public void Die() {
+        dead = true;
+        StartCoroutine(DieCameraCoroutine());
+    }
+
+    IEnumerator DieCameraCoroutine() {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Enemy>().Stop();
+        }
+        yield return new WaitForSeconds(1);
+        FindObjectOfType<CameraScript>().ZoomToPlayer();
+        yield return new WaitForSeconds(2);
+        GetComponent<RainbowEffect>().enabled = false;
+        GetComponent<SpriteRenderer>().color = Color.white;
+        bomb.GetComponent<SpriteRenderer>().enabled = false;
+        anim.Play("Explosion");
+        rb.simulated = false;
+        AudioSource.PlayClipAtPoint(explosionSound,transform.position);
+        yield return new WaitForSeconds(0.5f);
+        FindObjectOfType<CameraScript>().ZoomOutSlow();
+        foreach (GameObject enemy in enemies)
+        {
+            if (enemy != null)
+                enemy.GetComponent<Enemy>().Play();
+        }
+
+    }
+
+    void activateDeadSlime() {
+        deadSlime.SetActive(true);
+    }
+    
+    void EndDie() {
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 }
