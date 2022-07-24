@@ -136,7 +136,7 @@ public class Enemy : MonoBehaviour
             GameObject rightHalf = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             spawnHalfEnemy(rightHalf, transform.localScale, new Vector2(direction.x - 0.05f,direction.y));
         }
-        target.GetComponent<PlayerController>().enemiesKilled++;
+        target.GetComponent<PlayerController>().EnemiesKilled++;
         Destroy(gameObject);
     }
 
@@ -183,7 +183,7 @@ public class Enemy : MonoBehaviour
         bodyAnimator.Play("Die");
         shadowAnimator.Play("Die");
         yield return new WaitForSeconds(1);
-        target.GetComponent<PlayerController>().enemiesKilled++;
+        target.GetComponent<PlayerController>().EnemiesKilled++;
         Destroy(gameObject);
     }
 

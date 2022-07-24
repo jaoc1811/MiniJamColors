@@ -43,8 +43,15 @@ public class PlayerController : MonoBehaviour
 
     [Header("Harakiri")]
     [SerializeField] bool harakiri;
-    public int enemiesKilled = 0;
-    [SerializeField] int harakiriMax = 5;
+    private int enemiesKilled = 0;
+    public int EnemiesKilled {
+        get => enemiesKilled;
+        set {
+            enemiesKilled = value;
+            GameManager.instance.UpdateUIHarakiri(value);
+        }
+    }
+    public int harakiriMax = 5;
     [SerializeField] float invincibleDelay = 1f;
 
     [Header("Objects")]
@@ -65,7 +72,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
-        if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || enemiesKilled >= harakiriMax) && transform.localScale.x > 1 && !harakiri){
+        if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || EnemiesKilled >= harakiriMax) && transform.localScale.x > 1 && !harakiri){
             Harakiri();
         }
     }
@@ -199,7 +206,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(0,0);
         harakiri = true;
         invincible = true;
-        enemiesKilled = 0;
+        EnemiesKilled = 0;
         StartCoroutine(HarakiriCoroutine());
         // TODO: acercar la camara, parar todo
         // TODO: poner la barra en 0 en el UI
