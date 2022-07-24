@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
+
 
 public class StoryNextButton : MonoBehaviour
 {
@@ -50,6 +52,6 @@ public class StoryNextButton : MonoBehaviour
         // Disable buttons
         disableButtons();
         yield return new WaitForSeconds(2f);
-        Debug.Log("Load game scene");
+        SceneManager.LoadScene(sceneName);
     }
 }
