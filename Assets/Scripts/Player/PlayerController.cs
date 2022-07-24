@@ -116,10 +116,6 @@ public class PlayerController : MonoBehaviour
             attackPoint.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-        // if (isDodging && rb.velocity.magnitude < 0.1){ // Idle, move to looking side
-        //     float direction = attackPoint.localPosition.x > 0 ? 1 : -1;
-        //     rb.velocity = new Vector2(direction, 0) * speed;
-        // }
     }
 
     private void OnMove(InputValue movementValue) {
@@ -322,6 +318,8 @@ public class PlayerController : MonoBehaviour
             if (enemy != null)
                 enemy.GetComponent<Enemy>().Play();
         }
+        yield return new WaitForSeconds(2f);
+        GameManager.instance.GameOverScreen();
 
     }
 
