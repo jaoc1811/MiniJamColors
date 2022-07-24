@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StoryNextButton : MonoBehaviour
 {
@@ -33,6 +34,9 @@ public class StoryNextButton : MonoBehaviour
         foreach(GameObject button in GameObject.FindGameObjectsWithTag("Button")){
             button.GetComponent<Image>().enabled = false; 
             button.GetComponent<Button>().enabled = false;
+
+            TMP_Text text = button.GetComponentInChildren<TMP_Text>();
+            if (text) text.enabled = false;
         }
     }
 
