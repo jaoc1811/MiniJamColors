@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (harakiri) return;
+        if (harakiri || dead) return;
 
         rb.velocity = movementVector * speed;
         anim.SetFloat("Speed", rb.velocity.magnitude);
@@ -293,6 +293,7 @@ public class PlayerController : MonoBehaviour
     [ContextMenu("Die")]
     public void Die() {
         dead = true;
+        rb.velocity = Vector2.zero;
         StartCoroutine(DieCameraCoroutine());
     }
 

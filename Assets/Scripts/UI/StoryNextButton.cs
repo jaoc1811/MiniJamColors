@@ -47,6 +47,10 @@ public class StoryNextButton : MonoBehaviour
         StartCoroutine(loadScene(nextScene));
     }
 
+    public void DirectLoadScene(){
+        SceneManager.LoadScene(nextScene);
+    }
+
     IEnumerator loadScene(string sceneName){
         BlackScreen.SetActive(true);
         // Disable buttons
