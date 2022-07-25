@@ -6,11 +6,19 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    [Header("Scenes")]
     [SerializeField] string gameSceneName;
+    [SerializeField] string menuSceneName;
+
+    [Header("Fade")]
     [SerializeField] Image fade;
     [SerializeField] float fadeDuration = 1f;
     public void LoadGame() {
         StartCoroutine(LoadGameCoroutine());
+    }
+
+    public void LoadMenu() {
+        SceneManager.LoadScene(menuSceneName);
     }
 
     public void ExitGame() {
