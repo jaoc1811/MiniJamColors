@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image attackUI;
     [SerializeField] Image DodgeUI;
     [SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject timelineGameOver;
+    [SerializeField] GameObject timelinePause;
 
     [Header("Scenes")]
     [SerializeField] string EndingSceneName;
@@ -87,9 +89,19 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator LoadSceneCoroutine(string sceneName) {
-        yield return new WaitForSeconds(0.1f);
+        timelineGameOver.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(sceneName);
+    }
 
+    public void LoadMenuFromPause() {
+        StartCoroutine(LoadMenuCoroutine(MenuSceneName));
+    }
+
+    IEnumerator LoadMenuCoroutine(string sceneName) {
+        timelinePause.SetActive(true);
+        yield return new WaitForSecondsRealtime(1.5f);
+        SceneManager.LoadScene(sceneName);
     }
 
     IEnumerator CountdownRoutine() {

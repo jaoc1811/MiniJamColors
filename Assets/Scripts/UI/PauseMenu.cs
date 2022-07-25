@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     [SerializeField] GameObject pauseMenuUI;
     [SerializeField] string menuScene;
+    [SerializeField] GameObject timeline;
 
     private void OnPause() {
         if (GameIsPaused) {
@@ -19,6 +20,13 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Resume() {
+        StartCoroutine(ResumeCoroutine());
+    }
+
+    IEnumerator ResumeCoroutine() {
+        timeline.SetActive(true);
+        yield return new WaitForSecondsRealtime(1.5f);
+        timeline.SetActive(false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
