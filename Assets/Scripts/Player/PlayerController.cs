@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
     private void Update() {
         if ((GameObject.FindGameObjectsWithTag("Enemy").Length == 0 || EnemiesKilled >= harakiriMax) && transform.localScale.x > 1 && !harakiri){
             Harakiri();
-        } else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && transform.localScale.x == 1) {
+        } else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && currentScale.x == 1) {
             StartCoroutine(WinCoroutine());
         }
     }
