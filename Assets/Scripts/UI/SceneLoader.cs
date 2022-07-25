@@ -31,7 +31,7 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(gameSceneName);
     }
 
-    IEnumerator FadeIn() {
+    public IEnumerator FadeIn() {
         float counter = 0f;
         while (counter < fadeDuration) {
             counter += Time.deltaTime;
