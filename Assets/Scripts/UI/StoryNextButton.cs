@@ -12,6 +12,7 @@ public class StoryNextButton : MonoBehaviour
     [SerializeField] GameObject[] tutorialControls;
     [SerializeField] GameObject[] bombWarnings;
     [SerializeField] GameObject BlackScreen;
+    [SerializeField] GameObject ThankYouScreen;
     [SerializeField] string nextScene;
 
     int currentScene;
@@ -32,6 +33,10 @@ public class StoryNextButton : MonoBehaviour
             storySequence[currentScene].SetActive(false);
             currentScene++;
             storySequence[currentScene].SetActive(true);
+            Debug.Log(currentScene);
+            if (currentScene + 1 == storySequence.Length){ // Last scene
+                ThankYouScreen.SetActive(true);
+            }
         }
     }
 
@@ -67,6 +72,7 @@ public class StoryNextButton : MonoBehaviour
     }
 
     IEnumerator loadScene(string sceneName){
+        ThankYouScreen.SetActive(false);
         BlackScreen.SetActive(true);
         // Disable buttons
         disableButtons();
