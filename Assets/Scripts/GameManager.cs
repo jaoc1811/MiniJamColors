@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Scenes")]
     [SerializeField] string EndingSceneName;
     [SerializeField] string GameSceneName;
+    [SerializeField] string MenuSceneName;
     
 
     private void Awake() {
@@ -78,12 +79,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void LoadGame() {
-        StartCoroutine(LoadGameCoroutine());
+        StartCoroutine(LoadSceneCoroutine(GameSceneName));
     }
 
-    IEnumerator LoadGameCoroutine() {
+    public void LoadMenu() {
+        StartCoroutine(LoadSceneCoroutine(MenuSceneName));
+    }
+
+    IEnumerator LoadSceneCoroutine(string sceneName) {
         yield return new WaitForSeconds(0.1f);
-        SceneManager.LoadScene(GameSceneName);
+        SceneManager.LoadScene(sceneName);
 
     }
 
