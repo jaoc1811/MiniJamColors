@@ -38,9 +38,16 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+
     public void LoadMenu() {
-        //Time.timeScale = 1f;
-        //SceneManager.LoadScene(menuScene);
-        Debug.Log("Loading Menu");
+        StartCoroutine(LoadMenuCoroutine(menuScene));
+    }
+
+    IEnumerator LoadMenuCoroutine(string sceneName) {
+        timeline.SetActive(true);
+        yield return new WaitForSecondsRealtime(1.5f);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        SceneManager.LoadScene(sceneName);
     }
 }

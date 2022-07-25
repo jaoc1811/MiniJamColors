@@ -1747,12 +1747,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 120
   timerText: {fileID: 752474660}
+  timerAudio: {fileID: 8300000, guid: fdbd75d13e8ea594491b90d7699547ee, type: 3}
   harakiriProgress: {fileID: 1767660149}
   attackUI: {fileID: 668842841}
   DodgeUI: {fileID: 490839430}
   gameOverScreen: {fileID: 504523487}
-  timelineGameOver: {fileID: 617078873}
-  timelinePause: {fileID: 199549547}
+  timeline: {fileID: 617078873}
   EndingSceneName: Ending
   GameSceneName: Game
   MenuSceneName: Title
@@ -2151,7 +2151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 449403369}
-  menuScene: Menu
+  menuScene: Title
   timeline: {fileID: 199549547}
 --- !u!1 &830434497
 GameObject:
@@ -5377,9 +5377,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 681496903}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadMenuFromPause
+      - m_Target: {fileID: 821498502}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

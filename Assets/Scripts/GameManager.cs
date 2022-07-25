@@ -20,8 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image attackUI;
     [SerializeField] Image DodgeUI;
     [SerializeField] GameObject gameOverScreen;
-    [SerializeField] GameObject timelineGameOver;
-    [SerializeField] GameObject timelinePause;
+    [SerializeField] GameObject timeline;
 
     [Header("Scenes")]
     [SerializeField] string EndingSceneName;
@@ -45,9 +44,6 @@ public class GameManager : MonoBehaviour
         float maxEnemiesKilled = player.GetComponent<PlayerController>().harakiriMax;
         float scale = 1-enemiesKilled/maxEnemiesKilled;
         harakiriProgress.localScale = new Vector3(harakiriProgress.localScale.x, scale, harakiriProgress.localScale.x);
-        Debug.Log("enemiesKilled: " + enemiesKilled);
-        Debug.Log("max: " + maxEnemiesKilled);
-        Debug.Log(enemiesKilled/maxEnemiesKilled);
     }
 
     public void UpdateUIAttack(bool canAttack) {
@@ -90,18 +86,8 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator LoadSceneCoroutine(string sceneName) {
-        timelineGameOver.SetActive(true);
+        timeline.SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(sceneName);
-    }
-
-    public void LoadMenuFromPause() {
-        StartCoroutine(LoadMenuCoroutine(MenuSceneName));
-    }
-
-    IEnumerator LoadMenuCoroutine(string sceneName) {
-        timelinePause.SetActive(true);
-        yield return new WaitForSecondsRealtime(1.5f);
         SceneManager.LoadScene(sceneName);
     }
 
@@ -110,6 +96,11 @@ public class GameManager : MonoBehaviour
             UpdateUITime();
             yield return new WaitForSeconds(1);
             timer--;
+            Debug.Log(timer);
+            if(timer==5) {
+                Debug.Log("Entro");
+                GetComponent<AudioSource>().Play();
+            }
         }
         UpdateUITime();
 
