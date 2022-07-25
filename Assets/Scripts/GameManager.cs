@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     [Header("Bomb Timer")]
     public int timer;
     [SerializeField] TMP_Text timerText;
-    [SerializeField] AudioClip timerAudio;
 
     [Header("UI")]
     [SerializeField] RectTransform harakiriProgress;
@@ -101,7 +100,7 @@ public class GameManager : MonoBehaviour
             timer--;
             if(timer==5) {
                 surpriseL.SetActive(true);
-                AudioSource.PlayClipAtPoint(timerAudio, transform.position);
+                GetComponent<AudioSource>().Play();
             }
             if (timer < 5) {
                 surpriseL.SetActive(!surpriseL.activeInHierarchy);
