@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image DodgeUI;
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject timeline;
+    [SerializeField] GameObject surpriseL;
+    [SerializeField] GameObject surpriseR;
 
     [Header("Scenes")]
     [SerializeField] string EndingSceneName;
@@ -98,9 +100,16 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             timer--;
             if(timer==5) {
+                surpriseL.SetActive(true);
                 AudioSource.PlayClipAtPoint(timerAudio, transform.position);
             }
+            if (timer < 5) {
+                surpriseL.SetActive(!surpriseL.activeInHierarchy);
+                surpriseR.SetActive(!surpriseL.activeInHierarchy);
+            }
         }
+        surpriseL.SetActive(false);
+        surpriseR.SetActive(false);
         UpdateUITime();
 
         while(player.GetComponent<PlayerController>().harakiri) {
