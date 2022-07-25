@@ -226,6 +226,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator WinCoroutine() {
         FindObjectOfType<CameraScript>().ZoomToPlayer();
+        StartCoroutine(FindObjectOfType<SceneLoader>().FadeIn());
         yield return new WaitForSeconds(1f);
         GameManager.instance.LoadEnding();
     }
