@@ -33,7 +33,6 @@ public class StoryNextButton : MonoBehaviour
             storySequence[currentScene].SetActive(false);
             currentScene++;
             storySequence[currentScene].SetActive(true);
-            Debug.Log(currentScene);
             if (currentScene + 1 == storySequence.Length && ThankYouScreen){ // Last scene
                 ThankYouScreen.SetActive(true);
             }

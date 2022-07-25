@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        Destroy(GameObject.Find("AudioSource"));
         StartCoroutine(CountdownRoutine());
     }
 
